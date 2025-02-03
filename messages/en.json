@@ -1,0 +1,12 @@
+{
+    "navigation": {
+      "home": "Home",
+      "about": "About",
+      "readingList": "Reading List",
+      "newsletter": "Newsletter"
+    },
+    "about": {
+      "title": "About Me",
+      "description": "Learn more about who I am and what I do."
+    }
+}
