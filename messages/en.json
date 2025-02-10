@@ -1,12 +1,26 @@
 {
-    "navigation": {
-      "home": "Home",
-      "about": "About",
-      "readingList": "Reading List",
-      "newsletter": "Newsletter"
-    },
-    "about": {
-      "title": "About Me",
-      "description": "Learn more about who I am and what I do."
-    }
+  "metadata": {
+    "title": "Kai-Chun Hsu | A software engineer who loves writing.",
+    "description": "A software engineer who loves writing. Not just code. But writing novels too."
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "readingList": "Reading List",
+    "newsletter": "Newsletter",
+    "novels": "Novels",
+    "toggle": "繁中"
+  },
+  "home": {
+    "title": "Home"
+  },
+  "about": {
+    "title": "About"
+  },
+  "reading": {
+    "title": "Reading List"
+  },
+  "newsletter": {
+    "title": "Newsletter"
+  }
 }

@@ -1,12 +1,26 @@
 {
-    "navigation": {
-      "home": "首頁",
-      "about": "關於我",
-      "readingList": "書單",
-      "newsletter": "部落格"
-    },
-    "about": {
-      "title": "關於我的事情",
-      "description": "我是..."
-    }
+  "metadata": {
+    "title": "Kevin Hsu | 寫小說的工程師",
+    "description": "目標是今年要寫完一本小說的矽谷工程師。"
+  },
+  "navigation": {
+    "home": "首頁",
+    "about": "關於我",
+    "readingList": "書單",
+    "newsletter": "部落格",
+    "novels": "小說",
+    "toggle": "English"
+  },
+  "home": {
+    "title": "主頁"
+  },
+  "about": {
+    "title": "關於我"
+  },
+  "reading": {
+    "title": "書單"
+  },
+  "newsletter": {
+    "title": "部落格"
+  }
 }

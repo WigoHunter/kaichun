@@ -1,9 +1,9 @@
-import {NextIntlClientProvider} from 'next-intl';
-import {getMessages} from 'next-intl/server';
-import {notFound} from 'next/navigation';
-import {routing} from '@/i18n/routing';
+import { NextIntlClientProvider } from 'next-intl';
+import { getMessages, getTranslations } from 'next-intl/server';
+import { notFound } from 'next/navigation';
+import { routing } from '@/i18n/routing';
+import Navbar from '@/components/Navbar';
 
-import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -17,10 +17,18 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Kai-Chun Hsu | A software engineer who loves writing.",
-  description: "A software engineer who loves writing. Not just code. But writing novels too.",
-};
+interface MetadataParams {
+  locale: string;
+}
+
+export async function generateMetadata({ locale }: MetadataParams) {
+  const t = await getTranslations({ locale, namespace: "metadata" });
+
+  return {
+    title: t('title'),
+    description: t('description')
+  };
+}
 
 export default async function LocaleLayout({
   children,
@@ -30,7 +38,7 @@ export default async function LocaleLayout({
   params: Promise<{ locale: string }>
 }) {
   const { locale } = await params;
-  
+
   /* eslint-disable @typescript-eslint/no-explicit-any */
   if (!routing.locales.includes(locale as any)) {
     notFound();
@@ -44,6 +52,7 @@ export default async function LocaleLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <NextIntlClientProvider messages={messages}>
+          <Navbar />
           {children}
         </NextIntlClientProvider>
       </body>
