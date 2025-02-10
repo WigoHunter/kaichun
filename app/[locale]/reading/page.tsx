@@ -1,6 +1,6 @@
 import { useTranslations } from 'next-intl';
 
-export default function () {
+export default function PageReading() {
     const t = useTranslations('reading');
 
     return (
