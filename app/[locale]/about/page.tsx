@@ -2,11 +2,11 @@ import { useTranslations } from 'next-intl';
 import { PencilIcon, CodeBracketIcon } from '@heroicons/react/20/solid'
 import { Metadata } from 'next';
 
-type Props = {
-  params: { locale: string }
-};
+type MetadataProps = Promise<{
+  locale: string
+}>;
 
-export const generateMetadata = async ({ params }: Props): Promise<Metadata> => {
+export const generateMetadata = async ({ params }: { params: MetadataProps }): Promise<Metadata> => {
   const { locale } = await params;
   return {
     title: locale === 'zh' ? '關於我 | 許凱鈞' : 'About me | Kevin Hsu',
