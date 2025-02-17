@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { useLocale, useTranslations } from 'next-intl';
 import { usePathname, useRouter } from 'next/navigation';
+import Image from 'next/image';
 import {
     Dialog,
     DialogPanel,
@@ -46,9 +47,11 @@ export default function Example() {
                 <div className="flex lg:flex-1">
                     <a href={`/${locale}`} className="-m-1.5 p-1.5">
                         <span className="sr-only">Kai-Chun</span>
-                        <img
+                        <Image
                             alt=""
                             src="/pic.png"
+                            height={120}
+                            width={120}
                             className="h-8 w-auto rounded-full"
                         />
                     </a>
@@ -119,9 +122,11 @@ export default function Example() {
                     <div className="flex items-center justify-between">
                         <a href={`/${locale}`} className="-m-1.5 p-1.5">
                             <span className="sr-only">Kai-Chun</span>
-                            <img
+                            <Image
                                 alt=""
                                 src="/pic.png"
+                                height={120}
+                                width={120}
                                 className="h-8 w-auto rounded-full"
                             />
                         </a>

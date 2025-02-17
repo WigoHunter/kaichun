@@ -1,4 +1,6 @@
 import { useTranslations } from 'next-intl';
+import Link from 'next/link'
+import Image from 'next/image'
 import { Metadata } from 'next';
 
 type MetadataProps = Promise<{
@@ -38,16 +40,18 @@ export default function About() {
                   rewrite: (text) => <a href="https://www.kaichun.blog/p/on-writing-again" className="text-indigo-600 font-semibold">{text}</a>,
                   learning: (text) => <a href="https://www.kaichun.blog/p/4-things-i-learned-from-writing-and-coding-2024" className="text-indigo-600 font-semibold">{text}</a>,
                   sanderson: (text) => <a href="https://www.kaichun.blog/p/brandon-sanderson-on-writing-a-good-story" className="text-indigo-600 font-semibold">{text}</a>,
-                  novel: (text) => <a href="/zh/fantasy" className="text-indigo-600 font-semibold">{text}</a>,
+                  novel: (text) => <Link href="/zh/fantasy" className="text-indigo-600 font-semibold">{text}</Link>,
                 })}
               </p>
             </div>
           </div>
         </div>
         <div className="-mt-12 -mb-12 -ml-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-3 lg:row-start-1 lg:overflow-hidden">
-          <img
+          <Image
             alt=""
             src="/2024H2.jpg"
+            width={1200}
+            height={600}
             className="w-full rounded-xl bg-gray-900 ring-1 shadow-xl ring-gray-400/10 lg:w-[48rem] xl:w-[57rem]"
           />
         </div>
