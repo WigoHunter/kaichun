@@ -1,5 +1,4 @@
 import { useTranslations } from 'next-intl';
-import { PencilIcon, CodeBracketIcon } from '@heroicons/react/20/solid'
 import { Metadata } from 'next';
 
 type MetadataProps = Promise<{
