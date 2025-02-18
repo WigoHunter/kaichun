@@ -20,7 +20,7 @@ export default function About() {
   const t = useTranslations('about');
 
   return (
-    <div className="relative isolate overflow-hidden bg-white px-8 py-24 sm:py-32 lg:overflow-visible lg:px-0">
+    <div className="relative isolate overflow-hidden bg-white px-8 py-12 sm:py-32 lg:overflow-visible lg:px-0">
       <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
         <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
           <div className="lg:pr-4">
@@ -29,7 +29,7 @@ export default function About() {
               <h1 className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
                 {t('title')}
               </h1>
-              <p className="mt-6 text-xl/8 text-gray-900">
+              <p className="mt-6 text-l/8 text-gray-900">
                 {t.rich('introduction', {
                   br: () => <br />,
                   strong: (text) => <strong>{text}</strong>,
