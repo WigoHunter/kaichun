@@ -72,8 +72,8 @@ export default function PageNewsLetter() {
                     {t('description')}
                 </p>
             </div>
-            <div className="max-w-xl mx-auto pt-4">
-                <iframe src={`${t('url')}/embed`} width="480" height="150" className="bg-white max-w-xl"></iframe>
+            <div className="max-w-xl -ms-18 md:mx-auto lg:mx-auto pt-4">
+                <iframe src={`${t('url')}/embed`} width="480" height="150" className="bg-white"></iframe>
             </div>
             <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-4 lg:mx-0 lg:max-w-none lg:grid-cols-1">
                 {posts.map((post, i) => (
