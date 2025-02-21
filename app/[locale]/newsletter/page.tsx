@@ -100,7 +100,7 @@ export default function PageNewsLetter() {
                     </article>
                 ))}
             </div>
-            <div className="my-12 flex items-center justify-center">
+            <div className="mt-12 flex items-center justify-center">
                 <a
                     href={t('url')}
                     target='_blank'

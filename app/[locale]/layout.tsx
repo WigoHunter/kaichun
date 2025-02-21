@@ -3,6 +3,7 @@ import { getMessages, getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -53,7 +54,10 @@ export default async function LocaleLayout({
       >
         <NextIntlClientProvider messages={messages}>
           <Navbar />
-          {children}
+          <div className="min-h-screen">
+            {children}
+          </div>
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>

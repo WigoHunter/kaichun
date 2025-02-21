@@ -30,7 +30,7 @@ const novels = [
     { name: '靈火師', description: '台式奇幻 / 親情', href: '/zh/taiwanese-fantasy', icon: FingerPrintIcon },
 ]
 
-export default function Example() {
+export default function Navbar() {
     const t = useTranslations('navigation');
     const locale = useLocale();
     const router = useRouter();
