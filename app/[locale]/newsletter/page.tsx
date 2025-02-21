@@ -100,6 +100,15 @@ export default function PageNewsLetter() {
                     </article>
                 ))}
             </div>
+            <div className="my-12 flex items-center justify-center">
+                <a
+                    href={t('url')}
+                    target='_blank'
+                    className="rounded-md bg-gray-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-gray-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600"
+                >
+                    {t('readmore')} <span aria-hidden="true">→</span>
+                </a>
+            </div>
         </div>
     </div>;
 }

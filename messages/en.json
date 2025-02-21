@@ -25,6 +25,7 @@
   "newsletter": {
     "title": "Kai-Chun's Blinking Cursor",
     "description": "Monthly posts on Writing ✏️, Reading 📓, and occasionally Software Engineering 💻.",
-    "url": "https://www.kevinhsu.blog"
+    "url": "https://www.kevinhsu.blog",
+    "readmore": "Read more"
   }
 }
