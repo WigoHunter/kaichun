@@ -12,7 +12,9 @@
     "toggle": "繁中"
   },
   "home": {
-    "title": "Home"
+    "title": "Software engineer, amateur fiction & blog writer",
+    "description": "Hey, I'm Kevin, a software engineer in the San Francisco Bay Area, building creator toolings. I grew up in Taiwan, and dream of being a writer. Currently working on my first novel.",
+    "url": "https://www.kevinhsu.blog"
   },
   "about": {
     "title": "Kai-Chun Hsu",

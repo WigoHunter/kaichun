@@ -12,7 +12,9 @@
     "toggle": "English"
   },
   "home": {
-    "title": "主頁"
+    "title": "軟體工程師 / 自稱的小說家",
+    "description": "我是凱鈞，在灣區做軟體工程師，開發一些創作者工具。工作之外，我的夢想是當個小說家，預計 2025 年可以寫完第一本小說<novel>《盜火戰記》</novel>。",
+    "url": "https://www.kaichun.blog"
   },
   "about": {
     "title": "許凱鈞",
