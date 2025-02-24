@@ -10,9 +10,9 @@ export default function Home() {
   const posts = getPosts(locale);
 
   return (
-    <div className="bg-white py-12 sm:py-16">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-4xl flex flex-col items-center">
+    <div className="bg-white py-12 sm:py-16 overflow-hidden">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8 overflow-hidden">
+        <div className="mx-auto max-w-4xl flex flex-col items-center overflow-hidden">
           <Image
             alt=""
             src="/pic.png"
@@ -52,7 +52,7 @@ export default function Home() {
           <hr className="my-8 border-gray-200 mx-auto dark:border-gray-700" />
         </div>
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <h1 className="mx-auto mt-12 -mb-4 w-xl font-bold tracking-tight text-gray-900 text-3xl">{t.rich('threetwoone', {
+          <h1 className="mx-auto mt-12 -mb-4 max-w-xl sm:w-xl font-bold tracking-tight text-gray-900 text-3xl">{t.rich('threetwoone', {
             num: (text) => <span className="text-indigo-600">{text}</span>,
           })}</h1>
           <h2 className="mx-auto mt-12 w-xl font-bold tracking-tight text-gray-900 text-2xl">{t.rich('writing', {
@@ -103,8 +103,8 @@ export default function Home() {
           <hr className="my-8 border-gray-200 mx-auto dark:border-gray-700" />
         </div>
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <h2 className="mx-auto mt-12 w-xl font-bold tracking-tight text-gray-900 text-2xl">{t('contact')}</h2>
-          <p className="mx-auto mt-4 w-xl text-sm text-gray-600">
+          <h2 className="mx-auto mt-12 max-w-xl sm:w-xl font-bold tracking-tight text-gray-900 text-2xl">{t('contact')}</h2>
+          <p className="mx-auto mt-4 max-w-xl sm:w-xl text-sm text-gray-600">
             {t('contactDescription')}
           </p>
         </div>
