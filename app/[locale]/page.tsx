@@ -99,6 +99,15 @@ export default function Home() {
             {t('sideprojectDescription')}
           </p>
         </div>
+        <div className="max-w-2xl mx-auto mt-16">
+          <hr className="my-8 border-gray-200 mx-auto dark:border-gray-700" />
+        </div>
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <h2 className="mx-auto mt-12 w-xl font-bold tracking-tight text-gray-900 text-2xl">{t('contact')}</h2>
+          <p className="mx-auto mt-4 w-xl text-sm text-gray-600">
+            {t('contactDescription')}
+          </p>
+        </div>
       </div>
     </div>
   );

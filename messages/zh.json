@@ -21,7 +21,9 @@
     "reading": "<num>2</num> 本正在讀的書",
     "readingDescription": "aka 最近感興趣的東西",
     "sideproject": "<num>1</num> 個正在玩的 side project",
-    "sideprojectDescription": "aka 最近在好奇的東西"
+    "sideprojectDescription": "aka 最近在好奇的東西",
+    "contact": "聯絡我",
+    "contactDescription": "如果你有什麼想聊的，歡迎寄封信給我 wigoplaysgames@gmail.com。但我也得老實說，對於交朋友這種事，我並不是很在行⋯⋯"
   },
   "about": {
     "title": "許凱鈞",
@@ -29,7 +31,8 @@
     "introduction": "安安！我是 Kevin 😎<br></br><br></br>我在台北長大，目前住在舊金山灣區，在 Meta 做 iOS 工程師第五年了，主要負責一些創作者工具。<br></br><br></br>畢竟我自己的第一個夢想就是想當小說家，如果能幫助其他創作者從事他們的創作（最好還能賺點錢），那我就很快樂 🚀<br></br><br></br>工作之外，我大多數的時間都花在耍廢與寫作。耍廢就算了，但如果你也對寫作有興趣的話，有幾個部落格文章你也許會感興趣：<rewrite>我（重新開始）寫作的前 2 年回顧</rewrite>、<learning>寫作教我的 4 件事</learning>，還有 <sanderson>Brandon Sanderson 寫作課的心得</sanderson>。<br></br><br></br>另外，我今年目標是完成第一本奇幻小說<novel>《盜火戰記》</novel>。"
   },
   "reading": {
-    "title": "書單"
+    "title": "書單",
+    "description": "也許有點奇怪，但我相信書是最值得送 & 收取的禮物之一。這些是我近期在讀，或者長期以來都很推薦的書！"
   },
   "newsletter": {
     "title": "凱鈞的部落格。",
