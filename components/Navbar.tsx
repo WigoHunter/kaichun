@@ -21,6 +21,7 @@ import {
     CursorArrowRaysIcon,
     FingerPrintIcon,
     XMarkIcon,
+    LanguageIcon
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 
@@ -111,9 +112,13 @@ export default function Navbar() {
                     </Popover>}
                 </PopoverGroup>
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                    <a onClick={() => switchLocale(locale === 'en' ? 'zh' : 'en')} className="text-sm/6 font-semibold text-gray-900 cursor-pointer">
-                        {t('toggle')} <span aria-hidden="true">&rarr;</span>
-                    </a>
+                    <button
+                        onClick={() => switchLocale(locale === 'en' ? 'zh' : 'en')}
+                        className="flex items-center gap-2 px-4 py-2 bg-white hover:bg-gray-50 text-gray-800 rounded-lg shadow-sm border border-gray-200 transition-colors duration-200 cursor-pointer"
+                    >
+                        <LanguageIcon aria-hidden="true" className="size-6" />
+                        <span>{t('toggle')}</span>
+                    </button>
                 </div>
             </nav>
             <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
@@ -187,12 +192,13 @@ export default function Navbar() {
                                 </Disclosure>}
                             </div>
                             <div className="py-6">
-                                <a
+                                <button
                                     onClick={() => switchLocale(locale === 'en' ? 'zh' : 'en')}
-                                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 cursor-pointer"
+                                    className="flex items-center gap-2 px-4 py-2 bg-white hover:bg-gray-50 text-gray-800 rounded-lg shadow-sm border border-gray-200 transition-colors duration-200 cursor-pointer"
                                 >
-                                    {t('toggle')}
-                                </a>
+                                    <LanguageIcon aria-hidden="true" className="size-6" />
+                                    <span>{t('toggle')}</span>
+                                </button>
                             </div>
                         </div>
                     </div>
