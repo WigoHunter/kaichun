@@ -14,7 +14,14 @@
   "home": {
     "title": "軟體工程師 / 自稱的小說家",
     "description": "我是凱鈞，在灣區做軟體工程師，開發一些創作者工具。工作之外，我的夢想是當個小說家，預計 2025 年可以寫完第一本小說<novel>《盜火戰記》</novel>。",
-    "url": "https://www.kaichun.blog"
+    "url": "https://www.kaichun.blog",
+    "threetwoone": "關於我的 <num>3, 2, 1...</num> 件事",
+    "writing": "<num>3</num> 篇近期的部落格文章",
+    "writingDescription": "aka 最近腦袋中在想的一些事情",
+    "reading": "<num>2</num> 本正在讀的書",
+    "readingDescription": "aka 最近感興趣的東西",
+    "sideproject": "<num>1</num> 個正在玩的 side project",
+    "sideprojectDescription": "aka 最近在好奇的東西"
   },
   "about": {
     "title": "許凱鈞",

@@ -1,10 +1,14 @@
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import Link from 'next/link'
 import Image from 'next/image'
+import { getPosts } from '@/data/posts';
 
 
 export default function Home() {
   const t = useTranslations('home');
+  const locale = useLocale();
+  const posts = getPosts(locale);
+
   return (
     <div className="bg-white py-12 sm:py-16">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -43,6 +47,57 @@ export default function Home() {
               <span className="sr-only">LinkedIn page</span>
             </a>
           </div>
+        </div>
+        <div className="max-w-2xl mx-auto mt-16">
+          <hr className="my-8 border-gray-200 mx-auto dark:border-gray-700" />
+        </div>
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <h1 className="mx-auto mt-12 -mb-4 w-xl font-bold tracking-tight text-gray-900 text-3xl">{t.rich('threetwoone', {
+            num: (text) => <span className="text-indigo-600">{text}</span>,
+          })}</h1>
+          <h2 className="mx-auto mt-12 w-xl font-bold tracking-tight text-gray-900 text-2xl">{t.rich('writing', {
+            num: (text) => <span className="text-indigo-600">{text}</span>,
+          })}</h2>
+          <p className="mx-auto w-xl text-sm leading-8 text-gray-600">
+            {t('writingDescription')}
+          </p>
+          <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-4 lg:mx-0 lg:max-w-none lg:grid-cols-1">
+            {posts.map((post, i) => (
+              <article key={i} className="flex flex-col items-center justify-between">
+                <div className="max-w-xl">
+                  <div className="mt-8 flex items-center gap-x-4 text-xs">
+                    <time className="text-gray-500">
+                      {post.date}
+                    </time>
+                    <p className="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100 text-indigo-600">
+                      {post.category.title}
+                    </p>
+                  </div>
+                  <div className="group relative">
+                    <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
+                      <a href={post.href}>
+                        <span className="absolute inset-0" />
+                        {post.title}
+                      </a>
+                    </h3>
+                    <p className="mt-2 line-clamp-3 text-sm leading-6 text-gray-600">{post.description}</p>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+          <h2 className="mx-auto mt-12 w-xl font-bold tracking-tight text-gray-900 text-2xl">{t.rich('reading', {
+            num: (text) => <span className="text-indigo-600">{text}</span>,
+          })}</h2>
+          <p className="mx-auto w-xl text-sm leading-8 text-gray-600">
+            {t('readingDescription')}
+          </p>
+          <h2 className="mx-auto mt-12 w-xl font-bold tracking-tight text-gray-900 text-2xl">{t.rich('sideproject', {
+            num: (text) => <span className="text-indigo-600">{text}</span>,
+          })}</h2>
+          <p className="mx-auto w-xl text-sm leading-8 text-gray-600">
+            {t('sideprojectDescription')}
+          </p>
         </div>
       </div>
     </div>
