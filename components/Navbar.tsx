@@ -28,7 +28,7 @@ import { ChevronDownIcon } from '@heroicons/react/20/solid'
 const novels = [
     { name: '盜火戰記', description: '奇幻 / 戰鬥 / 成長', href: '/zh/fantasy', icon: ChartPieIcon },
     { name: 'A.I. 的妹妹', description: '科幻 / 親情', href: '/zh/sister-of-an-AI', icon: CursorArrowRaysIcon },
-    { name: '靈火師', description: '台式奇幻 / 親情', href: '/zh/taiwanese-fantasy', icon: FingerPrintIcon },
+    { name: '靈煙師', description: '台式奇幻 / 親情', href: '/zh/taiwanese-fantasy', icon: FingerPrintIcon },
 ]
 
 export default function Navbar() {
