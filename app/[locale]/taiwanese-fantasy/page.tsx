@@ -149,7 +149,7 @@ export default function PageTaiwaneseFantasy() {
                         className="rounded-xl bg-gray-50 object-contain"
                     />
                 </figure>
-                {previewChatper.split(/\r?\n|\r|\n/g).map(line => <p className="mt-6 text-l leading-8">{line}</p>)}
+                {previewChatper.split(/\r?\n|\r|\n/g).map((line, i) => <p key={i} className="mt-6 text-l leading-8">{line}</p>)}
             </div>
         </div>
     );
