@@ -1,6 +1,6 @@
-import Image from 'next/image'
+import Novel from '@/components/Novel';
 
-const previewChatper = `
+const previewChapter = `
 　　烈日之下，好幾滴汗水從萊凱的下巴滑落。
 
 　　他看著汗水沒入腳下的肥沃黑土，變得不見，成為土壤的養分。然而，汗水與鹽分也還遠遠不是這塊土地從他身上奪取最多的資源。
@@ -346,21 +346,6 @@ const previewChatper = `
 
 export default function PageFantasy() {
     return (
-        <div className="bg-white px-6 lg:px-8 py-12 sm:py-16">
-            <div className="mx-auto max-w-3xl text-base leading-7 text-gray-700">
-                <p className="text-base font-semibold leading-7 text-indigo-600">試讀版（序章）</p>
-                <h1 className="mt-2 mb-8 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">盜火戰記</h1>
-                <figure className="my-12">
-                    <Image
-                        alt=""
-                        src="/fantasy_banner.png"
-                        width={1600}
-                        height={800}
-                        className="rounded-xl bg-gray-50 object-contain"
-                    />
-                </figure>
-                {previewChatper.split(/\r?\n|\r|\n/g).map((line, i) => <p key={i} className="mt-6 text-l leading-8">{line}</p>)}
-            </div>
-        </div>
+        <Novel previewChapter={previewChapter} name="盜火戰記" imageSource="/fantasy_banner.png" />
     );
 }

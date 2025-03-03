@@ -1,6 +1,6 @@
-import Image from 'next/image'
+import Novel from '@/components/Novel';
 
-const previewChatper = `
+const previewChapter = `
 　　從舊金山國際機場到桃園的班機落地時，已是深夜。
 
 　　空氣裡夾帶著一絲熟悉的濕氣，從旅客通道的縫隙灌進來。許輝祐拖著黑色行李箱，漫步在長長的通道裡。走著走著，經過轉角處時，他不經意地瞥見玻璃倒映出自己的臉。
@@ -135,22 +135,5 @@ const previewChatper = `
 `;
 
 export default function PageTaiwaneseFantasy() {
-    return (
-        <div className="bg-white px-6 lg:px-8 py-12 sm:py-16">
-            <div className="mx-auto max-w-3xl text-base leading-7 text-gray-700">
-                <p className="text-base font-semibold leading-7 text-indigo-600">試讀版（序章）</p>
-                <h1 className="mt-2 mb-8 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">靈煙師</h1>
-                <figure className="my-12">
-                    <Image
-                        alt=""
-                        src="/taiwanese_magic.png"
-                        width={1600}
-                        height={800}
-                        className="rounded-xl bg-gray-50 object-contain"
-                    />
-                </figure>
-                {previewChatper.split(/\r?\n|\r|\n/g).map((line, i) => <p key={i} className="mt-6 text-l leading-8">{line}</p>)}
-            </div>
-        </div>
-    );
+    return <Novel previewChapter={previewChapter} name="靈煙師" imageSource="/taiwanese_magic.png" />
 }
