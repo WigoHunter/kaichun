@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import Novel from '@/components/Novel';
 
 const previewChapter = `
