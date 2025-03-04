@@ -15,15 +15,16 @@
     "title": "Software engineer, amateur fiction & blog writer",
     "description": "Hey, I'm Kevin, a software engineer in the San Francisco Bay Area, building creator toolings. I grew up in Taiwan, and dream of being a writer. Currently working on my first novel.",
     "url": "https://www.kevinhsu.blog",
-    "threetwoone": "Here are 3, 2, and 1 thing about me...",
     "writing": "<num>3</num> Recent Essays",
-    "writingDescription": "AKA what I'm thinking lately",
-    "reading": "<num>2</num> Books I'm Reading",
-    "readingDescription": "AKA what I'm interested in lately",
-    "sideproject": "<num>1</num> Side Project",
-    "sideprojectDescription": "AKA what I'm building right now",
+    "writingDescription": "What I'm thinking lately",
+    "reading": "<num>2</num> Books I'm (re-)reading",
+    "readingDescription": "What I'm interested in lately",
+    "sideproject": "<num>1</num> Project",
+    "sideprojectDescription": "What I'm focusing on right now",
     "contact": "Contact me",
-    "contactDescription": "Warning: I'm not the best at making friends. That said, if you'd like to reach me, here's my email: wigoplaysgames@gmail.com."
+    "contactDescription": "If you'd like to reach me, here's my email: wigoplaysgames dot gmail.com.",
+    "readingReason": "Why I like it",
+    "project": "<novel>《盜火戰記》</novel> is a long-form fantasy novel I’m currently writing. The story takes place in a medieval world where magic beans serve as the foundation of both the economy and magic. Humans consume these beans to harness magic, giving noble families who can cultivate them control over both magical power and most resources. However, during the grand Magic Bean Harvest Festival, the Salwen family’s bean fields are stolen…"
   },
   "about": {
     "title": "Kai-Chun Hsu",
@@ -32,9 +33,8 @@
   },
   "reading": {
     "title": "My Reading List",
-    "description": "I don't know about you, but I get very excited when people recommend books to me. Here's my attempt to do that for you.",
-    "reason": "Why I like it",
-    "who": "Who it's for"
+    "description": "I love when people recommend books to me. I hope you enjoy reading too... If so, here's what I'm reading recently and some of my all time favorite books.",
+    "reason": "Why I like it"
   },
   "newsletter": {
     "title": "Kai-Chun's Blinking Cursor",

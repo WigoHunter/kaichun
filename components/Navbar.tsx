@@ -17,18 +17,15 @@ import {
 } from '@headlessui/react'
 import {
     Bars3Icon,
-    ChartPieIcon,
-    CursorArrowRaysIcon,
-    FingerPrintIcon,
     XMarkIcon,
     LanguageIcon
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 
 const novels = [
-    { name: '盜火戰記', description: '奇幻 / 戰鬥 / 成長', href: '/zh/fantasy', icon: ChartPieIcon },
-    { name: 'A.I. 的妹妹', description: '科幻 / 親情', href: '/zh/sister-of-an-AI', icon: CursorArrowRaysIcon },
-    { name: '靈煙師', description: '台式奇幻 / 親情', href: '/zh/taiwanese-fantasy', icon: FingerPrintIcon },
+    { name: '盜火戰記', description: '奇幻、長篇', href: '/zh/fantasy', image: '/fantasy_banner.png' },
+    { name: 'A.I. 的妹妹', description: '科幻、短篇', href: '/zh/sister-of-an-AI', image: '/ai_sister.png' },
+    { name: '靈煙師', description: '台灣奇幻、短篇', href: '/zh/taiwanese-fantasy', image: '/taiwanese_magic.png' },
 ]
 
 export default function Navbar() {
@@ -89,14 +86,20 @@ export default function Navbar() {
                             transition
                             className="absolute top-full -left-8 z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white ring-1 shadow-lg ring-gray-900/5 transition data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in"
                         >
-                            <div className="p-4">
+                            <div className="p-2">
                                 {novels.map((novel) => (
                                     <div
                                         key={novel.name}
                                         className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50"
                                     >
-                                        <div className="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                                            <novel.icon aria-hidden="true" className="size-6 text-gray-600 group-hover:text-indigo-600" />
+                                        <div className="flex flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                                            <Image
+                                                alt=""
+                                                src={novel.image}
+                                                height={40}
+                                                width={80}
+                                                className="h-8 w-auto"
+                                            />
                                         </div>
                                         <div className="flex-auto">
                                             <a href={novel.href} className="block font-semibold text-gray-900">

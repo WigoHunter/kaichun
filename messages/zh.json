@@ -6,7 +6,7 @@
   "navigation": {
     "home": "首頁",
     "about": "關於我",
-    "readingList": "書單",
+    "readingList": "閱讀清單",
     "newsletter": "部落格",
     "novels": "小說",
     "toggle": "English"
@@ -15,15 +15,16 @@
     "title": "軟體工程師 / 自稱的小說家",
     "description": "我是凱鈞，在灣區做軟體工程師，開發一些創作者工具。工作之外，我的夢想是當個小說家，預計 2025 年可以寫完第一本小說<novel>《盜火戰記》</novel>。",
     "url": "https://www.kaichun.blog",
-    "threetwoone": "關於我的 <num>3, 2, 1...</num> 件事",
     "writing": "<num>3</num> 篇近期的部落格文章",
-    "writingDescription": "aka 最近腦袋中在想的一些事情",
-    "reading": "<num>2</num> 本正在讀的書",
-    "readingDescription": "aka 最近感興趣的東西",
-    "sideproject": "<num>1</num> 個正在玩的 side project",
-    "sideprojectDescription": "aka 最近在好奇的東西",
+    "writingDescription": "(最近在想的事情)",
+    "reading": "<num>2</num> 本書",
+    "readingDescription": "(最近在讀的書)",
+    "sideproject": "<num>1</num> 個專案",
+    "sideprojectDescription": "(最近時間花去哪)",
     "contact": "聯絡我",
-    "contactDescription": "如果你有什麼想聊的，歡迎寄封信給我 wigoplaysgames@gmail.com。但我也得老實說，對於交朋友這種事，我並不是很在行⋯⋯"
+    "contactDescription": "如果你有什麼想聊的，歡迎寄封信給我 wigoplaysgames dot gmail.com。",
+    "readingReason": "簡短、無雷心得",
+    "project": "<novel>《盜火戰記》</novel>是我正在寫的一本長篇奇幻小說。故事發生在一個以「魔豆」為經濟與魔法核心的中古世界。人類透過吃下魔豆來驅動魔法，因此能夠種植魔豆的貴族掌握了魔法與大多的資源。然而，在魔豆豐收祭典上，薩爾溫家族的魔豆田被偷了⋯⋯"
   },
   "about": {
     "title": "許凱鈞",
@@ -31,10 +32,9 @@
     "introduction": "安安！我是 Kevin 😎<br></br><br></br>我在台北長大，目前住在舊金山灣區，在 Meta 做 iOS 工程師第五年了，主要負責一些創作者工具。<br></br><br></br>畢竟我自己的第一個夢想就是想當小說家，如果能幫助其他創作者從事他們的創作（最好還能賺點錢），那我就很快樂 🚀<br></br><br></br>工作之外，我大多數的時間都花在耍廢與寫作。耍廢就算了，但如果你也對寫作有興趣的話，有幾個部落格文章你也許會感興趣：<rewrite>我（重新開始）寫作的前 2 年回顧</rewrite>、<learning>寫作教我的 4 件事</learning>，還有 <sanderson>Brandon Sanderson 寫作課的心得</sanderson>。<br></br><br></br>另外，我今年目標是完成第一本奇幻小說<novel>《盜火戰記》</novel>。"
   },
   "reading": {
-    "title": "凱鈞的書單。",
-    "description": "也許有點奇怪，但我相信書是最值得送 & 收取的禮物之一。這些是我近期在讀，或者長期以來都很推薦的書！",
-    "reason": "簡短、無雷心得",
-    "who": "誰會適合這本書"
+    "title": "凱鈞的閱讀清單。",
+    "description": "我相信喜歡的書是最值得交流的話題之一。這些是我近期在讀，或者長期以來都很推薦的書！",
+    "reason": "簡短、無雷心得"
   },
   "newsletter": {
     "title": "凱鈞的部落格。",
