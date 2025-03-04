@@ -133,7 +133,7 @@ export default function Home() {
                 className="rounded-xl bg-gray-50 object-contain"
               />
             </figure>
-            <p className="mx-auto w-xl text-sm leading-8 text-gray-600">{t.rich('project', {
+            <p className="mx-auto w-l md:w-xl text-sm leading-8 text-gray-600">{t.rich('project', {
               br: () => <br />,
               novel: (text) => <Link href="/zh/fantasy" className="text-indigo-600 font-semibold">{text}</Link>,
             })}</p>
