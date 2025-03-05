@@ -136,11 +136,11 @@ const previewChapter = `
 `;
 
 export default function PageTaiwaneseFantasy() {
-    return <>
+    return <div className="overflow-hidden">
         <Novel previewChapter={previewChapter} name="靈煙師" imageSource="/taiwanese_magic.png" />
         <div className="sm:max-w-2xl mx-auto mt-0 px-6">
             <hr className="my-8 border-gray-200 mx-auto dark:border-gray-700" />
         </div>
         <NovelSubscribe cta="預計 2026 才會繼續寫。想追蹤後續消息（或者單純想讓我開心）的話，歡迎訂閱：" />
-    </>
+    </div>
 }
