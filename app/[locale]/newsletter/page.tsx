@@ -8,7 +8,7 @@ export default function PageNewsLetter() {
     const locale = useLocale();
     const posts = getPosts(locale);
 
-    return <div className="bg-white py-12 sm:py-16">
+    return <div className="bg-white py-12 sm:py-16 overflow-hidden">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-xl">
                 <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{t('title')}</h2>
