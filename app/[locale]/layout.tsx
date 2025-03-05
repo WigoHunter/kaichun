@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import { Analytics } from "@vercel/analytics/react"
 
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -59,6 +60,7 @@ export default async function LocaleLayout({
           </div>
           <Footer />
         </NextIntlClientProvider>
+        <Analytics />
       </body>
     </html>
   )
