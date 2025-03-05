@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl';
-import Link from 'next/link'
 import Image from 'next/image'
 import { Metadata } from 'next';
+import RichText from '@/components/RichText';
 
 type MetadataProps = Promise<{
   locale: string
@@ -30,18 +30,7 @@ export default function About() {
                 {t('title')}
               </h1>
               <p className="mt-6 text-l/8 text-gray-900">
-                {t.rich('introduction', {
-                  br: () => <br />,
-                  strong: (text) => <strong>{text}</strong>,
-                  write: (text) => <a href="https://www.kevinhsu.blog/p/a-recap-of-my-first-two-years-of" className="text-indigo-600">{text}</a>,
-                  wop: (text) => <a href="https://www.kevinhsu.blog/p/my-write-of-passage-experience-lessons" className="text-indigo-600">{text}</a>,
-                  learn: (text) => <a href="https://www.kevinhsu.blog/p/5-things-i-learned-from-writing-and-coding-2024" className="text-indigo-600">{text}</a>,
-                  blog: (text) => <a href="https://www.kevinhsu.blog" className="text-indigo-600">{text}</a>,
-                  rewrite: (text) => <a href="https://www.kaichun.blog/p/on-writing-again" className="text-indigo-600 font-semibold">{text}</a>,
-                  learning: (text) => <a href="https://www.kaichun.blog/p/4-things-i-learned-from-writing-and-coding-2024" className="text-indigo-600 font-semibold">{text}</a>,
-                  sanderson: (text) => <a href="https://www.kaichun.blog/p/brandon-sanderson-on-writing-a-good-story" className="text-indigo-600 font-semibold">{text}</a>,
-                  novel: (text) => <Link href="/zh/chronicles-of-fire-theft" className="text-indigo-600 font-semibold">{text}</Link>,
-                })}
+                <RichText t={t} phrase="introduction" />
               </p>
             </div>
           </div>

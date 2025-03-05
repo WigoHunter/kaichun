@@ -1,9 +1,10 @@
 import { useTranslations, useLocale } from "next-intl";
-import Link from 'next/link'
 import Image from 'next/image'
 import { getPosts } from '@/data/posts';
 import { getBooks } from '@/data/books';
-
+import BookRec from '@/components/BookRec';
+import EssaySummary from '@/components/EssaySummary';
+import RichText from '@/components/RichText';
 
 export default function Home() {
   const t = useTranslations('home');
@@ -24,10 +25,7 @@ export default function Home() {
           />
           <h2 className="mt-8 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl text-center">{t('title')}</h2>
           <p className="mt-4 text-lg leading-8 text-gray-600 text-center">
-            {t.rich('description', {
-              br: () => <br />,
-              novel: (text) => <Link href="/zh/chronicles-of-fire-theft" className="text-indigo-600 font-semibold">{text}</Link>,
-            })}
+            <RichText t={t} phrase="description" />
           </p>
           <div className="flex mt-4 sm:justify-center">
             <a href={t('url')} className="text-gray-500 hover:text-gray-900 dark:hover:text-white" target="_blank">
@@ -54,72 +52,31 @@ export default function Home() {
           <hr className="my-8 border-gray-200 mx-auto dark:border-gray-700" />
         </div>
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <h2 className="mx-auto mt-12 w-xl font-bold tracking-tight text-gray-900 text-2xl">{t.rich('writing', {
-            num: (text) => <span className="text-indigo-600 text-4xl">{text}</span>,
-          })}</h2>
+          <h2 className="mx-auto mt-12 w-xl font-bold tracking-tight text-gray-900 text-2xl">
+            <RichText t={t} phrase="writing" />
+          </h2>
           <p className="mx-auto w-xl text-sm leading-8 text-gray-600">
             {t('writingDescription')}
           </p>
           <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-4 lg:mx-0 lg:max-w-none lg:grid-cols-1">
-            {posts.map((post, i) => (
-              <article key={i} className="flex flex-col items-center justify-between">
-                <div className="max-w-xl">
-                  <div className="mt-8 flex items-center gap-x-4 text-xs">
-                    <time className="text-gray-500">
-                      {post.date}
-                    </time>
-                    <p className="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100 text-indigo-600">
-                      {post.category.title}
-                    </p>
-                  </div>
-                  <div className="group relative">
-                    <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
-                      <a href={post.href}>
-                        <span className="absolute inset-0" />
-                        {post.title}
-                      </a>
-                    </h3>
-                    <p className="mt-2 line-clamp-3 text-sm leading-6 text-gray-600">{post.description}</p>
-                  </div>
-                </div>
-              </article>
+            {posts.map(post => (
+              <EssaySummary post={post} key={post.id} />
             ))}
           </div>
-          <h2 className="mx-auto mt-12 w-xl font-bold tracking-tight text-gray-900 text-2xl">{t.rich('reading', {
-            num: (text) => <span className="text-indigo-600 text-4xl">{text}</span>,
-          })}</h2>
+          <h2 className="mx-auto mt-12 w-xl font-bold tracking-tight text-gray-900 text-2xl">
+            <RichText t={t} phrase="reading" />
+          </h2>
           <p className="mx-auto w-xl text-sm leading-8 text-gray-600">
             {t('readingDescription')}
           </p>
           <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-4 lg:mx-0 lg:max-w-none lg:grid-cols-1">
             {books.map((book) => (
-              <article key={book.id} className="flex flex-col items-center justify-between">
-                <div className="max-w-xl">
-                  <div className="mt-8 flex items-center gap-x-4 text-xs">
-                    <p className="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100 text-indigo-600">
-                      {book.category.title}
-                    </p>
-                    <p className="text-gray-500">
-                      {book.author}
-                    </p>
-                  </div>
-                  <div className="group relative">
-                    <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
-                      <a href={book.href} target="_blank">
-                        <span className="absolute inset-0" />
-                        {book.title}
-                      </a>
-                    </h3>
-                    <h4 className="text-sm uppercase tracking-wider text-gray-400 mb-2 mt-4">{t('readingReason')}</h4>
-                    <p className="mt-2 line-clamp-3 text-sm leading-6 text-gray-600">{book.description}</p>
-                  </div>
-                </div>
-              </article>
+              <BookRec reason={t('readingReason')} book={book} key={book.id} />
             ))}
           </div>
-          <h2 className="mx-auto mt-12 w-xl font-bold tracking-tight text-gray-900 text-2xl">{t.rich('sideproject', {
-            num: (text) => <span className="text-indigo-600 text-4xl">{text}</span>,
-          })}</h2>
+          <h2 className="mx-auto mt-12 w-xl font-bold tracking-tight text-gray-900 text-2xl">
+            <RichText t={t} phrase="sideproject" />
+          </h2>
           <p className="mx-auto w-xl text-sm leading-8 text-gray-600">
             {t('sideprojectDescription')}
           </p>
@@ -133,10 +90,9 @@ export default function Home() {
                 className="rounded-xl bg-gray-50 object-contain"
               />
             </figure>
-            <p className="mx-auto w-l md:w-xl text-sm leading-8 text-gray-600">{t.rich('project', {
-              br: () => <br />,
-              novel: (text) => <Link href="/zh/chronicles-of-fire-theft" className="text-indigo-600 font-semibold">{text}</Link>,
-            })}</p>
+            <p className="mx-auto w-l md:w-xl text-sm leading-8 text-gray-600">
+              <RichText t={t} phrase="project" />
+            </p>
           </div>
         </div>
         <div className="max-w-2xl mx-auto mt-16">
