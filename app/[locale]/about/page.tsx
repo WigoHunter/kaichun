@@ -40,7 +40,7 @@ export default function About() {
                   rewrite: (text) => <a href="https://www.kaichun.blog/p/on-writing-again" className="text-indigo-600 font-semibold">{text}</a>,
                   learning: (text) => <a href="https://www.kaichun.blog/p/4-things-i-learned-from-writing-and-coding-2024" className="text-indigo-600 font-semibold">{text}</a>,
                   sanderson: (text) => <a href="https://www.kaichun.blog/p/brandon-sanderson-on-writing-a-good-story" className="text-indigo-600 font-semibold">{text}</a>,
-                  novel: (text) => <Link href="/zh/fantasy" className="text-indigo-600 font-semibold">{text}</Link>,
+                  novel: (text) => <Link href="/zh/chronicles-of-fire-theft" className="text-indigo-600 font-semibold">{text}</Link>,
                 })}
               </p>
             </div>

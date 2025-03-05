@@ -4,7 +4,7 @@ export default function Novel(
     { previewChapter, name, imageSource }: { previewChapter: string, name: string, imageSource: string }
 ) {
     return (
-        <div className="bg-white px-6 lg:px-8 py-12 sm:py-16">
+        <div className="bg-white px-6 lg:px-8 py-12 pb-4 sm:py-16 sm:pb-4">
             <div className="mx-auto max-w-3xl text-base leading-7 text-gray-700">
                 <p className="text-base font-semibold leading-7 text-indigo-600">試讀版（序章）</p>
                 <h1 className="mt-2 mb-8 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{name}</h1>

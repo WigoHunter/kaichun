@@ -26,7 +26,7 @@ export default function Home() {
           <p className="mt-4 text-lg leading-8 text-gray-600 text-center">
             {t.rich('description', {
               br: () => <br />,
-              novel: (text) => <Link href="/zh/fantasy" className="text-indigo-600 font-semibold">{text}</Link>,
+              novel: (text) => <Link href="/zh/chronicles-of-fire-theft" className="text-indigo-600 font-semibold">{text}</Link>,
             })}
           </p>
           <div className="flex mt-4 sm:justify-center">
@@ -135,7 +135,7 @@ export default function Home() {
             </figure>
             <p className="mx-auto w-l md:w-xl text-sm leading-8 text-gray-600">{t.rich('project', {
               br: () => <br />,
-              novel: (text) => <Link href="/zh/fantasy" className="text-indigo-600 font-semibold">{text}</Link>,
+              novel: (text) => <Link href="/zh/chronicles-of-fire-theft" className="text-indigo-600 font-semibold">{text}</Link>,
             })}</p>
           </div>
         </div>

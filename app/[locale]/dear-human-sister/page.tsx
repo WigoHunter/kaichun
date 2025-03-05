@@ -1,4 +1,5 @@
 import Novel from '@/components/Novel';
+import NovelSubscribe from '@/components/NovelSubscribe';
 
 const previewChapter = `
 　　陽光即將昇起，但黑暗依然籠罩著清晨前那該死的十五分鐘。
@@ -134,6 +135,12 @@ const previewChapter = `
 
 export default function PageSisterOfAnAI() {
     return (
-        <Novel previewChapter={previewChapter} name="A.I. 的妹妹" imageSource="/ai_sister.png" />
+        <>
+            <Novel previewChapter={previewChapter} name="A.I. 的妹妹" imageSource="/ai_sister.png" />
+            <div className="sm:max-w-2xl mx-auto mt-0 px-6">
+                <hr className="my-8 border-gray-200 mx-auto dark:border-gray-700" />
+            </div>
+            <NovelSubscribe cta="預計 2025 年底寫完。想追蹤後續消息（或者單純想讓我開心）的話，歡迎訂閱：" />
+        </>
     );
 }
