@@ -1,7 +1,25 @@
 {
   "metadata": {
-    "title": "Kevin Hsu | 寫小說的工程師",
-    "description": "目標是今年要寫完一本小說的矽谷工程師。"
+    "title": "Kevin Hsu | 軟體工程師 & 自稱的小說家",
+    "description": "目標是今年要寫完一本小說的矽谷工程師。",
+    "home-title": "Kevin Hsu | 軟體工程師 & 自稱的小說家",
+    "home-description": "Kevin Hsu | 矽谷軟體工程師，工作時開發創作者工具，下班後創作故事。目標是 2025 完成第一本小說《盜火戰記》。",
+    "about-title": "關於我 | Kevin Hsu | 軟體工程師 & 自稱的小說家",
+    "about-description": "我是 Kevin，是個矽谷工程師，開發一些創作者工具。工作之外，我的夢想是當個小說家，預計 2025 年可以寫完第一本小說《盜火戰記》。",
+    "newsletter-title": "部落格文章 | Kevin Hsu | 軟體工程師 & 自稱的小說家",
+    "newsletter-description": "我的部落格。每個月產出一篇文，思考 + 談談寫作、小說與矽谷工作的大小雜事。",
+    "reading-title": "閱讀清單 | Kevin Hsu | 軟體工程師 & 自稱的小說家",
+    "reading-description": "喜歡的書是最值得交流的話題之一。這些是我近期在讀，或者長期以來都很推薦的書！",
+    "fantasy-title": "盜火戰記 | by Kevin Hsu, 寫小說的工程師",
+    "fantasy-description": "Kevin Hsu 的第一本長篇奇幻冒險故事。故事發生在一個以「魔豆」為經濟與魔法核心的中古世界。人類透過吃下魔豆來驅動魔法，因此能夠種植魔豆的貴族掌握了魔法與大多的資源。然而，在魔豆豐收祭典上，薩爾溫家族的魔豆田被偷了⋯⋯",
+    "fantasy-image": "/fantasy_banner.png",
+    "spirit-smoke-title": "靈煙師 | by Kevin Hsu, 寫小說的工程師",
+    "spirit-smoke-description": "矽谷工程師回台灣奔喪，但誰曉得阿公的靈魂居然被妖怪綁架⋯⋯ 是我在國外想念阿公阿嬤的時候，創作出來的一個故事想法。",
+    "spirit-smoke-image": "/taiwanese_magic.png",
+    "ai-title": "Dear Human Sister... | by Kevin Hsu, 寫小說的矽谷工程師",
+    "ai-description": "2047 年，人類被代號「宙斯」的 A.I. 取代。身為宙斯開發者的人類女兒，也是「宙斯」的妹妹，瑟琳娜被人唾棄、排擠，只能浪跡天涯。可是，人類最後的希望也是她⋯⋯",
+    "ai-image": "/ai_sister.png",
+    "image": "/2024H2.jpg"
   },
   "navigation": {
     "home": "首頁",

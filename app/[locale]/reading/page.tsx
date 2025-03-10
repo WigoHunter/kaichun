@@ -1,8 +1,25 @@
-"use client"
-
 import { useTranslations, useLocale } from 'next-intl';
 import { getBooks } from '@/data/books';
 import BookRec from '@/components/BookRec';
+import { getTranslations } from 'next-intl/server';
+import { createMetadata } from '@/data/metadata';
+import type { Metadata } from 'next';
+
+type MetadataProps = Promise<{
+    locale: string
+}>;
+
+export const generateMetadata = async ({ params }: { params: MetadataProps }): Promise<Metadata> => {
+    const { locale } = await params;
+    const t = await getTranslations({ locale, namespace: "metadata" });
+
+    return createMetadata({
+        title: t('reading-title'),
+        description: t('reading-description'),
+        locale,
+        image: t('image')
+    });
+};
 
 export default function PageNewsLetter() {
     const t = useTranslations('reading');

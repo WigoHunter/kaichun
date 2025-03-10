@@ -1,7 +1,9 @@
 import { useTranslations } from 'next-intl';
 import Image from 'next/image'
-import { Metadata } from 'next';
 import RichText from '@/components/RichText';
+import { getTranslations } from 'next-intl/server';
+import type { Metadata } from 'next';
+import { createMetadata } from '@/data/metadata';
 
 type MetadataProps = Promise<{
   locale: string
@@ -9,12 +11,15 @@ type MetadataProps = Promise<{
 
 export const generateMetadata = async ({ params }: { params: MetadataProps }): Promise<Metadata> => {
   const { locale } = await params;
-  return {
-    title: locale === 'zh' ? '關於我 | 許凱鈞' : 'About me | Kevin Hsu',
-  };
-};
+  const t = await getTranslations({ locale, namespace: "metadata" });
 
-// FB engineer on creator economy.
+  return createMetadata({
+    title: t('about-title'),
+    description: t('about-description'),
+    locale,
+    image: t('image')
+  });
+};
 
 export default function About() {
   const t = useTranslations('about');

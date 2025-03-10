@@ -1,5 +1,24 @@
 import Novel from '@/components/Novel';
 import NovelSubscribe from '@/components/NovelSubscribe';
+import { getTranslations } from 'next-intl/server';
+import { createMetadata } from '@/data/metadata';
+import type { Metadata } from 'next';
+
+type MetadataProps = Promise<{
+    locale: string
+}>;
+
+export const generateMetadata = async ({ params }: { params: MetadataProps }): Promise<Metadata> => {
+    const { locale } = await params;
+    const t = await getTranslations({ locale, namespace: "metadata" });
+
+    return createMetadata({
+        title: t('spirit-smoke-title'),
+        description: t('spirit-smoke-description'),
+        locale,
+        image: t('spirit-smoke-image')
+    });
+};
 
 const previewChapter = `
 　　從舊金山國際機場到桃園的班機落地時，已是深夜。

@@ -1,5 +1,24 @@
 import Novel from '@/components/Novel';
 import NovelSubscribe from '@/components/NovelSubscribe';
+import { getTranslations } from 'next-intl/server';
+import { createMetadata } from '@/data/metadata';
+import type { Metadata } from 'next';
+
+type MetadataProps = Promise<{
+    locale: string
+}>;
+
+export const generateMetadata = async ({ params }: { params: MetadataProps }): Promise<Metadata> => {
+    const { locale } = await params;
+    const t = await getTranslations({ locale, namespace: "metadata" });
+
+    return createMetadata({
+        title: t('fantasy-title'),
+        description: t('fantasy-description'),
+        locale,
+        image: t('fantasy-image')
+    });
+};
 
 const previewChapter = `
 　　烈日之下，好幾滴汗水從萊凱的下巴滑落。

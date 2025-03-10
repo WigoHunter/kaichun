@@ -1,7 +1,25 @@
 {
   "metadata": {
     "title": "Kevin Hsu | A software engineer, and an amateur novelist.",
-    "description": "A software engineer who loves writing. I write not just code, but also fantasy and sci-fi novels."
+    "description": "A software engineer who loves writing. I write not just code, but also fantasy and sci-fi novels.",
+    "home-title": "Kevin Hsu | A software engineer, and an amateur novelist.",
+    "home-description": "A software engineer who loves writing. I write not just code, but also fantasy and sci-fi novels.",
+    "about-title": "About | Kevin Hsu | A software engineer, and an amateur novelist.",
+    "about-description": "Hey, I'm Kevin, an iOS engineer building creator toolings in SF Bay Area. I grew up in Taiwan, and dream of being a writer. Currently working on my first novel, 《盜火戰記》.",
+    "newsletter-title": "Newsletter Posts | Kevin Hsu | A software engineer, and an amateur novelist.",
+    "newsletter-description": "Monthly posts on Writing ✏️, Reading 📓, and occasionally Software Engineering 💻.",
+    "reading-title": "Reading List | Kevin Hsu | A software engineer, and an amateur novelist.",
+    "reading-description": "I love it when people recommend books to me. I hope you enjoy reading too... If so, here's what I'm reading recently and some of my all time favorite books!",
+    "fantasy-title": "盜火戰記 | by Kevin Hsu, 寫小說的工程師",
+    "fantasy-description": "Kevin Hsu 的第一本長篇奇幻冒險故事。故事發生在一個以「魔豆」為經濟與魔法核心的中古世界。人類透過吃下魔豆來驅動魔法，因此能夠種植魔豆的貴族掌握了魔法與大多的資源。然而，在魔豆豐收祭典上，薩爾溫家族的魔豆田被偷了⋯⋯",
+    "fantasy-image": "/fantasy_banner.png",
+    "spirit-smoke-title": "靈煙師 | by Kevin Hsu, 寫小說的矽谷工程師",
+    "spirit-smoke-description": "矽谷工程師回台灣奔喪，但誰曉得阿公的靈魂居然被妖怪綁架⋯⋯ 是我在國外想念阿公阿嬤的時候，創作出來的一個故事想法。",
+    "spirit-smoke-image": "/taiwanese_magic.png",
+    "ai-title": "Dear Human Sister... | by Kevin Hsu, 寫小說的矽谷工程師",
+    "ai-description": "2047 年，人類被代號「宙斯」的 A.I. 取代。身為宙斯開發者的人類女兒，也是「宙斯」的妹妹，瑟琳娜被人唾棄、排擠，只能浪跡天涯。可是，人類最後的希望也是她⋯⋯",
+    "ai-image": "/ai_sister.png",
+    "image": "/2024H2.jpg"
   },
   "navigation": {
     "home": "Home",

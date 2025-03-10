@@ -5,6 +5,26 @@ import { getBooks } from '@/data/books';
 import BookRec from '@/components/BookRec';
 import EssaySummary from '@/components/EssaySummary';
 import RichText from '@/components/RichText';
+import { getTranslations } from 'next-intl/server';
+import { createMetadata } from '@/data/metadata';
+import type { Metadata } from 'next';
+
+type MetadataProps = Promise<{
+  locale: string
+}>;
+
+export const generateMetadata = async ({ params }: { params: MetadataProps }): Promise<Metadata> => {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "metadata" });
+
+  return createMetadata({
+    title: t('home-title'),
+    description: t('home-description'),
+    locale,
+    image: t('image')
+  });
+};
+
 
 export default function Home() {
   const t = useTranslations('home');
