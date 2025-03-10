@@ -24,8 +24,8 @@ import { ChevronDownIcon } from '@heroicons/react/20/solid'
 
 const novels = [
     { name: '盜火戰記', description: '奇幻、長篇', href: '/zh/chronicles-of-fire-theft', image: '/fantasy_banner.png' },
-    { name: 'A.I. 的妹妹', description: '科幻、短篇', href: '/zh/dear-human-sister', image: '/ai_sister.png' },
     { name: '靈煙師', description: '台灣奇幻、短篇', href: '/zh/the-spirit-smoke', image: '/taiwanese_magic.png' },
+    { name: 'Dear Human Sister', description: '科幻、短篇', href: '/zh/dear-human-sister', image: '/ai_sister.png' },
 ]
 
 export default function Navbar() {

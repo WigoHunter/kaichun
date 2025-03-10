@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "title": "Kai-Chun Hsu | A software engineer who loves writing.",
-    "description": "A software engineer who loves writing. Not just code. But writing novels too."
+    "title": "Kevin Hsu | A software engineer, and an amateur novelist.",
+    "description": "A software engineer who loves writing. I write not just code, but also fantasy and sci-fi novels."
   },
   "navigation": {
     "home": "Home",
@@ -13,7 +13,7 @@
   },
   "home": {
     "title": "Software engineer, amateur fiction & blog writer",
-    "description": "Hey, I'm Kevin, a software engineer in the San Francisco Bay Area, building creator toolings. I grew up in Taiwan, and dream of being a writer. Currently working on my first novel.",
+    "description": "Hey, I'm Kevin, an iOS engineer building creator toolings in SF Bay Area. I grew up in Taiwan, and dream of being a writer. Currently working on my first novel, <novel>《盜火戰記》</novel>.",
     "url": "https://www.kevinhsu.blog",
     "writing": "<num>3</num> Recent Essays",
     "writingDescription": "What I'm thinking lately",
