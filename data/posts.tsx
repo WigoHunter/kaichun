@@ -1,6 +1,15 @@
 export const getPosts = (locale: string) => locale === 'en' ? [
     {
         id: 1,
+        title: "Three observations about A.I.",
+        href: "https://www.kevinhsu.blog/p/three-observations-about-ai",
+        description:
+            "As an iOS engineer, a writer who might soon be replaced by A.I., here are my observations: on writing, creativity, and the importance of being a good person.",
+        date: "Mar 23, 2025",
+        category: { title: "Writing & A.I." },
+    },
+    {
+        id: 2,
         title: "5 Things I Learned From My 5th Year of Software Engineering & 2nd Year of Writing.",
         href: "https://www.kevinhsu.blog/p/5-things-i-learned-from-writing-and-coding-2024",
         description:
@@ -9,22 +18,13 @@ export const getPosts = (locale: string) => locale === 'en' ? [
         category: { title: "Writing" },
     },
     {
-        id: 2,
+        id: 3,
         title: "A Recap of My First Two Years of Writing (Again): On Writing, Learnings, and Burnout.",
         href: "https://www.kevinhsu.blog/p/a-recap-of-my-first-two-years-of",
         description:
             "This is my second attempt at being a writer. The last time was almost 10 years ago. Now, after putting (some of) my shit together—stabilizing my career/income and having married my secret crush—revisiting the writer side of me has become a priority.",
         date: "Dec 31, 2024",
         category: { title: "Writing" },
-    },
-    {
-        id: 3,
-        title: "Curiosity is an antidote to getting old (mentally)",
-        href: "https://www.kevinhsu.blog/p/curiosity-is-an-antidote-to-getting",
-        description:
-            "Recently two things made me feel pessimistic about turning 30 next month... And here is my reflection on how to fix that.",
-        date: "Dec 23, 2024",
-        category: { title: "Getting old" },
     },
 ] : [
     {
