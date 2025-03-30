@@ -29,15 +29,24 @@ export const getPosts = (locale: string) => locale === 'en' ? [
 ] : [
     {
         id: 1,
+        title: "關於 A.I. 的三個觀察。",
+        href: "https://www.kaichun.blog/p/three-observations-about-ai",
+        description:
+            "作為一個聽說快被 A.I. 取代的工程師與熱愛寫作的人，我想要談談一些我對於 A.I. 的害怕與期待的事情：「寫作」越來越重要，「喜歡的事」越來越重要。人類語言變成一種程式語言。喔，還有，當個好人吧！",
+        date: "Mar 29, 2025",
+        category: { title: "寫作 & A.I." },
+    },
+    {
+        id: 2,
         title: "寫作與寫程式共同教我的 4 件事情。",
         href: "https://www.kaichun.blog/p/4-things-i-learned-from-writing-and-coding-2024",
         description:
             "寫程式跟寫作像極了，都是一種創意的表達方式。去年理解到這兩件事情的共同點後，我花了很多時間去沈澱，思考有什麼是我從寫程式裡學到，可以應用在寫作上；或者，反過來是從寫作上學到，能夠在工作上幫助我成為一名更好的軟體工程師的事情。",
         date: "Feb 02, 2025",
-        category: { title: "寫作、寫程式" },
+        category: { title: "寫作 & 寫程式" },
     },
     {
-        id: 2,
+        id: 3,
         title: "2024 H2 回顧：好的事情，新的想法，還有談談建立習慣的這件事。",
         href: "https://www.kaichun.blog/p/2024-h2-review",
         description:
@@ -45,13 +54,5 @@ export const getPosts = (locale: string) => locale === 'en' ? [
         date: "Jan 05, 2025",
         category: { title: "2024 回顧" },
     },
-    {
-        id: 3,
-        title: "談談（重新開始）寫作的前兩年：復健期，與很快到來的撞牆期。",
-        href: "https://www.kaichun.blog/p/on-writing-again",
-        description:
-            "這是我第二次嘗試將寫作融入生活裡。上一次嘗試，還是在高中時期。當時沒有收入，也沒有真正能維生的技能，而我暗戀對象正以高中學霸的成績走向一條成功、明亮的道路。我熱愛寫作，但我後來還是放棄寫作，花了將近十年去找尋人生裡能賺錢的興趣。現在，距離當時將近十年了，已經有了一個相對穩定的職業與收入來源，也娶了當年的暗戀對象，我就真的真的很想重新給「寫作的自己」一個機會！",
-        date: "Dec 31, 2024",
-        category: { title: "寫作" },
-    },
+
 ];
