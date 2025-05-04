@@ -45,7 +45,6 @@ export default async function LocaleLayout({
 }) {
   const { locale } = await params;
 
-  /* eslint-disable @typescript-eslint/no-explicit-any */
   if (!routing.locales.includes(locale as any)) {
     notFound();
   }

@@ -59,7 +59,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     sitemapEntries.push({
         url: baseUrl,
         lastModified: currentDate,
-        changeFrequency: 'weekly' as 'weekly',
+        changeFrequency: 'weekly',
         priority: 1.0
     });
 
