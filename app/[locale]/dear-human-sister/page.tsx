@@ -2,6 +2,8 @@ import Novel from '@/components/Novel';
 import NovelSubscribe from '@/components/NovelSubscribe';
 import { getTranslations } from 'next-intl/server';
 import { createMetadata } from '@/data/metadata';
+import { ArticleJsonLd } from '@/components/JsonLd';
+
 import type { Metadata } from 'next';
 
 type MetadataProps = Promise<{
@@ -16,7 +18,11 @@ export const generateMetadata = async ({ params }: { params: MetadataProps }): P
         title: t('ai-title'),
         description: t('ai-description'),
         locale,
-        image: t('ai-image')
+        image: t('ai-image'),
+        type: 'article',
+        datePublished: '2025-05-04',
+        dateModified: '2025-05-04',
+        keywords: '科幻小說, 小說, 科幻, AI 末日, AI, 親情'
     });
 };
 
@@ -154,12 +160,26 @@ const previewChapter = `
 
 export default function PageSisterOfAnAI() {
     return (
-        <div className="overflow-hidden">
-            <Novel previewChapter={previewChapter} name="Dear Human Sister..." imageSource="/ai_sister.png" />
-            <div className="sm:max-w-2xl mx-auto mt-0 px-6">
-                <hr className="my-8 border-gray-200 mx-auto dark:border-gray-700" />
+        <>
+            <ArticleJsonLd
+                title="Dear Human Sister..."
+                description="科幻小說。人類被代號「宙斯」的 A.I. 取代。身為宙斯開發者的人類女兒，也是「宙斯」的妹妹，瑟琳娜被人唾棄、排擠，只能浪跡天涯。可是，人類最後的希望也是她⋯⋯"
+                url={`https://www.kevinhsu.io/zh/dear-human-sister`}
+                images={["https://www.kevinhsu.io/ai_sister.png"]}
+                datePublished="2025-05-04"
+                dateModified="2025-05-04"
+                authorName="許凱鈞"
+                authorUrl={`https://www.kevinhsu.io/zh/about`}
+                publisherName="許凱鈞"
+                publisherLogo={`https://www.kevinhsu.io/pic.png`}
+            />
+            <div className="overflow-hidden">
+                <Novel previewChapter={previewChapter} name="Dear Human Sister..." imageSource="/ai_sister.png" />
+                <div className="sm:max-w-2xl mx-auto mt-0 px-6">
+                    <hr className="my-8 border-gray-200 mx-auto dark:border-gray-700" />
+                </div>
+                <NovelSubscribe cta="預計 2026 年才會繼續寫完。想追蹤後續消息（或者單純想讓我開心）的話，歡迎訂閱：" />
             </div>
-            <NovelSubscribe cta="預計 2026 年才會繼續寫完。想追蹤後續消息（或者單純想讓我開心）的話，歡迎訂閱：" />
-        </div>
+        </>
     );
 }

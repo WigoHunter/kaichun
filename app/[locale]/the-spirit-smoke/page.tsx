@@ -2,6 +2,8 @@ import Novel from '@/components/Novel';
 import NovelSubscribe from '@/components/NovelSubscribe';
 import { getTranslations } from 'next-intl/server';
 import { createMetadata } from '@/data/metadata';
+import { ArticleJsonLd } from '@/components/JsonLd';
+
 import type { Metadata } from 'next';
 
 type MetadataProps = Promise<{
@@ -16,7 +18,11 @@ export const generateMetadata = async ({ params }: { params: MetadataProps }): P
         title: t('spirit-smoke-title'),
         description: t('spirit-smoke-description'),
         locale,
-        image: t('spirit-smoke-image')
+        image: t('spirit-smoke-image'),
+        type: 'article',
+        datePublished: '2025-05-04',
+        dateModified: '2025-05-04',
+        keywords: '奇幻小說, 台灣奇幻, 台式奇幻, 小說, 奇幻, 親情, 魔法, 神明'
     });
 };
 
@@ -155,11 +161,25 @@ const previewChapter = `
 `;
 
 export default function PageTaiwaneseFantasy() {
-    return <div className="overflow-hidden">
-        <Novel previewChapter={previewChapter} name="靈煙師" imageSource="/taiwanese_magic.png" />
-        <div className="sm:max-w-2xl mx-auto mt-0 px-6">
-            <hr className="my-8 border-gray-200 mx-auto dark:border-gray-700" />
+    return <>
+        <ArticleJsonLd
+            title="靈煙師"
+            description="奇幻小說。矽谷工程師回台灣奔喪，但誰曉得阿公的靈魂居然被妖怪綁架⋯⋯ 是我在國外想念阿公阿嬤的時候，創作出來的一個故事想法。"
+            url={`https://www.kevinhsu.io/zh/the-spirit-smoke`}
+            images={["https://www.kevinhsu.io/taiwanese_magic.png"]}
+            datePublished="2025-05-04"
+            dateModified="2025-05-04"
+            authorName="許凱鈞"
+            authorUrl={`https://www.kevinhsu.io/zh/about`}
+            publisherName="許凱鈞"
+            publisherLogo={`https://www.kevinhsu.io/pic.png`}
+        />
+        <div className="overflow-hidden">
+            <Novel previewChapter={previewChapter} name="靈煙師" imageSource="/taiwanese_magic.png" />
+            <div className="sm:max-w-2xl mx-auto mt-0 px-6">
+                <hr className="my-8 border-gray-200 mx-auto dark:border-gray-700" />
+            </div>
+            <NovelSubscribe cta="預計 2025 年底寫完。想追蹤後續消息（或者單純想讓我開心）的話，歡迎訂閱：" />
         </div>
-        <NovelSubscribe cta="預計 2025 年底寫完。想追蹤後續消息（或者單純想讓我開心）的話，歡迎訂閱：" />
-    </div>
+    </>
 }

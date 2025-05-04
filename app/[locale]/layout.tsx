@@ -6,8 +6,10 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Analytics } from "@vercel/analytics/react"
 import { GoogleAnalytics } from '@next/third-parties/google';
+import { WebsiteJsonLd, PersonJsonLd } from '@/components/JsonLd';
 
 import { Geist, Geist_Mono } from "next/font/google";
+import type { Metadata } from 'next';
 import "./globals.css";
 
 const geistSans = Geist({
@@ -20,11 +22,12 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-interface MetadataParams {
-  locale: string;
-}
+type MetadataProps = Promise<{
+  locale: string
+}>;
 
-export async function generateMetadata({ locale }: MetadataParams) {
+export const generateMetadata = async ({ params }: { params: MetadataProps }): Promise<Metadata> => {
+  const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "metadata" });
 
   return {
@@ -48,9 +51,35 @@ export default async function LocaleLayout({
   }
 
   const messages = await getMessages();
+  const t = await getTranslations({ locale, namespace: "metadata" });
+  const baseUrl = process.env.VERCEL_URL
+    ? `https://${process.env.VERCEL_URL}`
+    : 'https://www.kevinhsu.io';
 
   return (
     <html lang={locale}>
+      <head>
+        <WebsiteJsonLd
+          url={baseUrl}
+          name={t('title')}
+          description={t('description')}
+          author={{
+            name: "Kevin Hsu",
+            url: `${baseUrl}/${locale}/about`
+          }}
+          inLanguage={['en', 'zh']}
+        />
+        <PersonJsonLd
+          name="Kevin Hsu"
+          url={`${baseUrl}/${locale}/about`}
+          image={`${baseUrl}/pic.png`}
+          description={t('about-description') || t('description')}
+          sameAs={[
+            "https://www.linkedin.com/in/kevinkchsu/",
+            "https://www.threads.net/@kevinhsu.js"
+          ]}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

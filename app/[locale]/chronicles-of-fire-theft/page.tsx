@@ -2,6 +2,8 @@ import Novel from '@/components/Novel';
 import NovelSubscribe from '@/components/NovelSubscribe';
 import { getTranslations } from 'next-intl/server';
 import { createMetadata } from '@/data/metadata';
+import { ArticleJsonLd } from '@/components/JsonLd';
+
 import type { Metadata } from 'next';
 
 type MetadataProps = Promise<{
@@ -16,7 +18,11 @@ export const generateMetadata = async ({ params }: { params: MetadataProps }): P
         title: t('fantasy-title'),
         description: t('fantasy-description'),
         locale,
-        image: t('fantasy-image')
+        image: t('fantasy-image'),
+        type: 'article',
+        datePublished: '2025-05-04',
+        dateModified: '2025-05-04',
+        keywords: '奇幻小說, 小說, 奇幻, 劍與魔法, 魔法, 魔豆'
     });
 };
 
@@ -366,12 +372,26 @@ const previewChapter = `
 
 export default function PageFantasy() {
     return (
-        <div className="overflow-hidden">
-            <Novel previewChapter={previewChapter} name="盜火戰記" imageSource="/fantasy_banner.png" />
-            <div className="sm:max-w-2xl mx-auto mt-0 px-6">
-                <hr className="my-8 border-gray-200 mx-auto dark:border-gray-700" />
+        <>
+            <ArticleJsonLd
+                title="盜火戰記"
+                description="奇幻小說。想要證明自己的貴族少女艾蓮娜、與滿心復仇的少年萊凱，在魔豆的牽引下的冒險故事。"
+                url={`https://www.kevinhsu.io/zh/chronicles-of-fire-theft`}
+                images={["https://www.kevinhsu.io/fantasy_banner.png"]}
+                datePublished="2025-05-04"
+                dateModified="2025-05-04"
+                authorName="許凱鈞"
+                authorUrl={`https://www.kevinhsu.io/zh/about`}
+                publisherName="許凱鈞"
+                publisherLogo={`https://www.kevinhsu.io/pic.png`}
+            />
+            <div className="overflow-hidden">
+                <Novel previewChapter={previewChapter} name="盜火戰記" imageSource="/fantasy_banner.png" />
+                <div className="sm:max-w-2xl mx-auto mt-0 px-6">
+                    <hr className="my-8 border-gray-200 mx-auto dark:border-gray-700" />
+                </div>
+                <NovelSubscribe cta="預計 2025 年中寫完。想追蹤後續消息（或者單純想讓我開心）的話，歡迎訂閱：" />
             </div>
-            <NovelSubscribe cta="預計 2025 年中寫完。想追蹤後續消息（或者單純想讓我開心）的話，歡迎訂閱：" />
-        </div>
+        </>
     );
 }

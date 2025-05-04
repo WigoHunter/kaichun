@@ -71,9 +71,6 @@ export default function Navbar() {
                     <a href={`/${locale}/about`} className="text-sm/6 font-semibold text-gray-900">
                         {t('about')}
                     </a>
-                    <a href={`/${locale}/reading`} className="text-sm/6 font-semibold text-gray-900">
-                        {t('readingList')}
-                    </a>
                     <a href={`/${locale}/newsletter`} className="text-sm/6 font-semibold text-gray-900">
                         {t('newsletter')}
                     </a>
@@ -161,12 +158,6 @@ export default function Navbar() {
                                     className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                                 >
                                     {t('about')}
-                                </a>
-                                <a
-                                    href={`/${locale}/reading`}
-                                    className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-                                >
-                                    {t('readingList')}
                                 </a>
                                 <a
                                     href={`/${locale}/newsletter`}

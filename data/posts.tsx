@@ -29,6 +29,15 @@ export const getPosts = (locale: string) => locale === 'en' ? [
 ] : [
     {
         id: 1,
+        title: "《AI 2027》讀後感：人類最後的技能、時間的通膨。",
+        href: "https://www.kaichun.blog/p/reading-ai-2027",
+        description:
+            "Daniel Kokotajlo 在離開 OpenAI 後創立 AI Futures Project 去研究 AI 發展與人類社會的預測。讀完過後，我感覺很快，人類最後守得住的技能，可能只剩下「品味」，而且「時間」也正在通膨。",
+        date: "Apr 27, 2025",
+        category: { title: "A.I. 與未來" },
+    },
+    {
+        id: 2,
         title: "關於 A.I. 的三個觀察。",
         href: "https://www.kaichun.blog/p/three-observations-about-ai",
         description:
@@ -37,7 +46,7 @@ export const getPosts = (locale: string) => locale === 'en' ? [
         category: { title: "寫作 & A.I." },
     },
     {
-        id: 2,
+        id: 3,
         title: "寫作與寫程式共同教我的 4 件事情。",
         href: "https://www.kaichun.blog/p/4-things-i-learned-from-writing-and-coding-2024",
         description:
@@ -45,14 +54,4 @@ export const getPosts = (locale: string) => locale === 'en' ? [
         date: "Feb 02, 2025",
         category: { title: "寫作 & 寫程式" },
     },
-    {
-        id: 3,
-        title: "2024 H2 回顧：好的事情，新的想法，還有談談建立習慣的這件事。",
-        href: "https://www.kaichun.blog/p/2024-h2-review",
-        description:
-            "半年前，我開始參考公司 Performance Review 的模式，每半年回顧一次生活方式，也給予自己調整的機會。我覺得既然工作每半年都要做個評比，那麼對我來說更重要、而且包含工作的「生活」，肯定是更值得好好回顧一下。一來如果有某個半年沒什麼值得紀錄的事情，那半年真的白過了，得給自己一個警訊跟調整的機會；二來，如果有做得好的事情，也該給自己一點鼓勵，提醒自己繼續下去。",
-        date: "Jan 05, 2025",
-        category: { title: "2024 回顧" },
-    },
-
 ];
