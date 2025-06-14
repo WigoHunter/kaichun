@@ -35,36 +35,55 @@ const WritingStreakHeatmap: React.FC<HeatmapProps> = ({ className = '' }) => {
       const rows = csvText.split('\n').slice(1); // Skip header row
       const processedData = rows
         .filter(row => row.trim())
-        .map(row => {
-          const [dateStr, wordCountStr] = row.split(',');
+        .map((row, index) => {
+          // Handle CSV parsing more robustly - split by comma but handle quoted fields
+          const csvParts = row.match(/(".*?"|[^",\s]+)(?=\s*,|\s*$)/g) || [];
+          const dateStr = csvParts[0];
+          const wordCountStr = csvParts[1];
+
           const cleanDateStr = dateStr?.trim().replace(/"/g, '');
 
-          // Parse date properly - handle M/D/YY format
-          let normalizedDate = cleanDateStr;
-          if (cleanDateStr && cleanDateStr.match(/^\d{1,2}\/\d{1,2}\/\d{2}$/)) {
-            // Convert M/D/YY to M/D/YYYY (assume 20YY for 2-digit years)
+          // Parse date properly - iOS Safari is strict about date formats
+          let finalDate: Date;
+
+          if (cleanDateStr && cleanDateStr.match(/^\d{1,2}\/\d{1,2}(\/\d{2,4})?$/)) {
+            // Handle M/D, M/D/YY, or M/D/YYYY format
             const parts = cleanDateStr.split('/');
-            normalizedDate = `${parts[0]}/${parts[1]}/20${parts[2]}`;
-          }
+            let month = parseInt(parts[0]);
+            let day = parseInt(parts[1]);
+            let year = parts[2] ? parseInt(parts[2]) : 25; // Default to 2025 if no year
 
-          const parsedDate = new Date(normalizedDate);
+            // Convert 2-digit year to 4-digit year
+            if (year < 100) {
+              year = 2000 + year;
+            }
 
-          if (isNaN(parsedDate.getTime())) {
+            // Fix year if it's 2001-2024, assume it should be 2025
+            if (year >= 2001 && year <= 2024) {
+              year = 2025;
+            }
+
+            // Create date using constructor (more reliable on iOS)
+            finalDate = new Date(year, month - 1, day); // month is 0-indexed
+          } else {
             return null;
           }
 
-          // Fix year if it's 2001-2024, assume it should be 2025
-          let finalDate = parsedDate;
-          if (parsedDate.getFullYear() >= 2001 && parsedDate.getFullYear() <= 2024) {
-            finalDate = new Date(2025, parsedDate.getMonth(), parsedDate.getDate());
+          if (isNaN(finalDate.getTime())) {
+            return null;
           }
+
+          const wordCount = parseInt(wordCountStr?.trim().replace(/"/g, '')) || 0;
 
           return {
             date: finalDate.toISOString().split('T')[0],
-            wordCount: parseInt(wordCountStr?.trim().replace(/"/g, '')) || 0
+            wordCount
           };
         })
-        .filter(item => item !== null)
+        .filter(item => {
+          const isValid = item !== null;
+          return isValid;
+        })
         .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
 
       setData(processedData);
