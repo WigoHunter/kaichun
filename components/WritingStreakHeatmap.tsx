@@ -35,7 +35,7 @@ const WritingStreakHeatmap: React.FC<HeatmapProps> = ({ className = '' }) => {
       const rows = csvText.split('\n').slice(1); // Skip header row
       const processedData = rows
         .filter(row => row.trim())
-        .map((row, index) => {
+        .map((row) => {
           // Handle CSV parsing more robustly - split by comma but handle quoted fields
           const csvParts = row.match(/(".*?"|[^",\s]+)(?=\s*,|\s*$)/g) || [];
           const dateStr = csvParts[0];
@@ -49,8 +49,8 @@ const WritingStreakHeatmap: React.FC<HeatmapProps> = ({ className = '' }) => {
           if (cleanDateStr && cleanDateStr.match(/^\d{1,2}\/\d{1,2}(\/\d{2,4})?$/)) {
             // Handle M/D, M/D/YY, or M/D/YYYY format
             const parts = cleanDateStr.split('/');
-            let month = parseInt(parts[0]);
-            let day = parseInt(parts[1]);
+            const month = parseInt(parts[0]);
+            const day = parseInt(parts[1]);
             let year = parts[2] ? parseInt(parts[2]) : 25; // Default to 2025 if no year
 
             // Convert 2-digit year to 4-digit year
