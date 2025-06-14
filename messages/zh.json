@@ -59,5 +59,11 @@
     "description": "每個月產出一篇文，思考與談談寫作、小說、故事設計與矽谷工作的小小雜事。",
     "url": "https://www.kaichun.blog",
     "readmore": "更多文章"
+  },
+  "writingStreak": {
+    "title": "2025 寫作紀錄",
+    "less": "少",
+    "more": "多",
+    "error": "載入寫作資料時出錯"
   }
 }

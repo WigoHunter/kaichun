@@ -5,6 +5,7 @@ import { getBooks } from '@/data/books';
 import BookRec from '@/components/BookRec';
 import EssaySummary from '@/components/EssaySummary';
 import RichText from '@/components/RichText';
+import WritingStreakHeatmap from '@/components/WritingStreakHeatmap';
 import { getTranslations } from 'next-intl/server';
 import { createMetadata } from '@/data/metadata';
 import type { Metadata } from 'next';
@@ -69,6 +70,10 @@ export default function Home() {
               </a>
             </div>
           </div>
+        </section>
+
+        <section aria-labelledby="writing-streak-section">
+          <WritingStreakHeatmap className="mx-auto w-xl max-w-7xl mt-8" />
         </section>
 
         <section aria-labelledby="writing-section" className="mt-16">

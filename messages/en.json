@@ -59,5 +59,11 @@
     "description": "Monthly posts on Writing ✏️, Reading 📓, and occasionally Software Engineering 💻.",
     "url": "https://www.kevinhsu.blog",
     "readmore": "Read more"
+  },
+  "writingStreak": {
+    "title": "Writing Streak of 2025",
+    "less": "Less",
+    "more": "More",
+    "error": "Error loading writing data"
   }
 }
