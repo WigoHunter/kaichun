@@ -29,6 +29,15 @@ export const getPosts = (locale: string) => locale === 'en' ? [
 ] : [
     {
         id: 1,
+        title: "2025 H1 回顧：多出去走走，還有談談建立獎勵系統（而不是懲罰系統）。",
+        href: "https://www.kaichun.blog/p/2025-h1-review",
+        description:
+            "參考公司每半年一次的 Performance Review——2024 年開始，我打算每半年回顧一次自己的生活方式，讓自己更有意識地決定時間花去哪裡，也記錄新的想法是從哪裡來的，還有喜歡的文章/影片/訪談。",
+        date: "July 13, 2025",
+        category: { title: "寫作" },
+    },
+    {
+        id: 2,
         title: "《AI 2027》讀後感：人類最後的技能、時間的通膨。",
         href: "https://www.kaichun.blog/p/reading-ai-2027",
         description:
@@ -37,21 +46,12 @@ export const getPosts = (locale: string) => locale === 'en' ? [
         category: { title: "A.I. 與未來" },
     },
     {
-        id: 2,
+        id: 3,
         title: "關於 A.I. 的三個觀察。",
         href: "https://www.kaichun.blog/p/three-observations-about-ai",
         description:
             "作為一個聽說快被 A.I. 取代的工程師與熱愛寫作的人，我想要談談一些我對於 A.I. 的害怕與期待的事情：「寫作」越來越重要，「喜歡的事」越來越重要。人類語言變成一種程式語言。喔，還有，當個好人吧！",
         date: "Mar 29, 2025",
         category: { title: "寫作 & A.I." },
-    },
-    {
-        id: 3,
-        title: "寫作與寫程式共同教我的 4 件事情。",
-        href: "https://www.kaichun.blog/p/4-things-i-learned-from-writing-and-coding-2024",
-        description:
-            "寫程式跟寫作像極了，都是一種創意的表達方式。去年理解到這兩件事情的共同點後，我花了很多時間去沈澱，思考有什麼是我從寫程式裡學到，可以應用在寫作上；或者，反過來是從寫作上學到，能夠在工作上幫助我成為一名更好的軟體工程師的事情。",
-        date: "Feb 02, 2025",
-        category: { title: "寫作 & 寫程式" },
     },
 ];
