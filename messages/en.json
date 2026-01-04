@@ -31,7 +31,7 @@
   },
   "home": {
     "title": "Software engineer, amateur fiction & blog writer",
-    "description": "Hey, I'm Kevin, an iOS engineer building creator toolings in SF Bay Area. I grew up in Taiwan, and dream of being a writer. Currently working on my first novel, <novel>《盜火戰記》</novel>.",
+    "description": "Hey, I'm Kevin, an iOS engineer building creator toolings in SF Bay Area. I grew up in Taiwan, and dream of being a writer. Currently working on my first novel.",
     "url": "https://www.kevinhsu.blog",
     "writing": "<num>3</num> Recent Essays",
     "writingDescription": "What I'm thinking lately",
@@ -47,7 +47,7 @@
   "about": {
     "title": "Kai-Chun Hsu",
     "subtitle": "I write fantasy novels and iOS code.",
-    "introduction": "Hey, thanks for stopping by 😎<br></br><br></br>I grew up in Taipei, currently work as an <strong>software engineer at Meta</strong> in the SF Bay Area. <br></br><br></br>I'm passionate about opportunities serving & empowering creators to make a living while working on their creative pursuits. I myself wanted to be a novelist when I was a kid too. <br></br><br></br>Outside of work, I enjoy writing a lot. If that sounds interesting to you, you can read more about <write>how I (re)started writing</write> (about 2 years ago), <wop>my experience of a writing bootcamp</wop>, and <learn>my learnings from writing</learn>. I now write monthly <blog>blog posts</blog>, a fantasy novel (hoping to finish/publish it in 2025), and scoping out 2 more short stories for 2026."
+    "introduction": "Hey, thanks for stopping by 😎<br></br><br></br>I grew up in Taipei, currently work as an <strong>software engineer at Meta</strong> in the SF Bay Area. <br></br><br></br>I'm passionate about opportunities serving & empowering creators to make a living while working on their creative pursuits. I myself wanted to be a novelist when I was a kid too. <br></br><br></br>Outside of work, I enjoy writing a lot. If that sounds interesting to you, you can read more about <write>how I (re)started writing</write> (about 2 years ago), <wop>my experience of a writing bootcamp</wop>, and <learn>my learnings from writing</learn>. I now write monthly <blog>blog posts</blog>, and a fantasy novel (hoping to finish/publish it in 2026)."
   },
   "reading": {
     "title": "My Reading List",
@@ -61,7 +61,7 @@
     "readmore": "Read more"
   },
   "writingStreak": {
-    "title": "Writing Streak of 2025",
+    "title": "Writing Streak",
     "less": "Less",
     "more": "More",
     "error": "Error loading writing data"

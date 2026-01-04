@@ -3,9 +3,9 @@
     "title": "Kevin Hsu | 軟體工程師 & 自稱的小說家",
     "description": "目標是今年要寫完一本小說的矽谷工程師。",
     "home-title": "Kevin Hsu | 軟體工程師 & 自稱的小說家",
-    "home-description": "Kevin Hsu | 矽谷軟體工程師，工作時開發創作者工具，下班後創作故事。目標是 2025 完成第一本小說《盜火戰記》。",
+    "home-description": "Kevin Hsu | 矽谷軟體工程師，工作時開發創作者工具，下班後創作故事。目標是 2026 完成第一本小說《竊賊與網紅》。",
     "about-title": "關於我 | Kevin Hsu | 軟體工程師 & 自稱的小說家",
-    "about-description": "我是 Kevin，是個矽谷工程師，開發一些創作者工具。工作之外，我的夢想是當個小說家，預計 2025 年可以寫完第一本小說《盜火戰記》。",
+    "about-description": "我是 Kevin，是個矽谷工程師，開發一些創作者工具。工作之外，我的夢想是當個小說家，預計 2026 年可以寫完第一本小說。",
     "newsletter-title": "部落格文章 | Kevin Hsu | 軟體工程師 & 自稱的小說家",
     "newsletter-description": "我的部落格。每個月產出一篇文，思考 + 談談寫作、小說與矽谷工作的大小雜事。",
     "reading-title": "閱讀清單 | Kevin Hsu | 軟體工程師 & 自稱的小說家",
@@ -31,7 +31,7 @@
   },
   "home": {
     "title": "軟體工程師 & 自稱的小說家",
-    "description": "我是 Kevin，是個矽谷工程師，開發一些創作者工具。工作之外，我的夢想是當個小說家，預計 2025 年可以寫完第一本小說<novel>《盜火戰記》</novel>。",
+    "description": "我是 Kevin，是個矽谷工程師，開發一些創作者工具。工作之外，我的夢想是當個小說家，預計 2026 年可以發佈第一本小說。",
     "url": "https://www.kaichun.blog",
     "writing": "<num>3</num> 篇近期的部落格文章",
     "writingDescription": "(最近在想的事情)",
@@ -61,7 +61,7 @@
     "readmore": "更多文章"
   },
   "writingStreak": {
-    "title": "2025 寫作紀錄",
+    "title": "寫作紀錄",
     "less": "少",
     "more": "多",
     "error": "載入寫作資料時出錯"
