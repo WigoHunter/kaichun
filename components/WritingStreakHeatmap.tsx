@@ -36,6 +36,7 @@ const WritingStreakHeatmap: React.FC<HeatmapProps> = ({ className = '' }) => {
       const processedData = rows
         .filter(row => row.trim())
         .map((row) => {
+          console.log(row);
           // Handle CSV parsing more robustly - split by comma but handle quoted fields
           const csvParts = row.match(/(".*?"|[^",\s]+)(?=\s*,|\s*$)/g) || [];
           const dateStr = csvParts[0];
@@ -51,7 +52,7 @@ const WritingStreakHeatmap: React.FC<HeatmapProps> = ({ className = '' }) => {
             const parts = cleanDateStr.split('/');
             const month = parseInt(parts[0]);
             const day = parseInt(parts[1]);
-            let year = parts[2] ? parseInt(parts[2]) : 25; // Default to 2025 if no year
+            let year = parts[2] ? parseInt(parts[2]) : 26; // Default to 2026 if no year
 
             // Convert 2-digit year to 4-digit year
             if (year < 100) {
@@ -126,9 +127,10 @@ const WritingStreakHeatmap: React.FC<HeatmapProps> = ({ className = '' }) => {
   const generateDateRange = (): string[] => {
     const dates: string[] = [];
 
-    // Show entire year 2025
-    const startDate = new Date(2025, 0, 1); // January 1, 2025
-    const endDate = new Date(2025, 11, 31); // December 31, 2025
+    // Show past 3 months
+    const endDate = new Date(); // Today
+    const startDate = new Date();
+    startDate.setMonth(startDate.getMonth() - 8); // 3 months ago
 
     for (let d = new Date(startDate); d <= endDate; d.setDate(d.getDate() + 1)) {
       dates.push(d.toISOString().split('T')[0]);
@@ -193,14 +195,20 @@ const WritingStreakHeatmap: React.FC<HeatmapProps> = ({ className = '' }) => {
           <div className="flex mb-1">
             {weeks.map((week, weekIndex) => {
               const firstDate = week.find(d => d !== '');
-              const isFirstWeekOfMonth = firstDate &&
-                new Date(firstDate).getFullYear() === 2025 &&
-                (weekIndex === 0 || new Date(firstDate).getDate() <= 7);
+              const prevWeek = weekIndex > 0 ? weeks[weekIndex - 1] : null;
+              const prevFirstDate = prevWeek?.find(d => d !== '');
+
+              // Show month label if this is the first week or if month changed from previous week
+              const shouldShowMonth = firstDate && (
+                weekIndex === 0 ||
+                !prevFirstDate ||
+                new Date(firstDate).getMonth() !== new Date(prevFirstDate).getMonth()
+              );
 
               return (
                 <div key={weekIndex} className="flex justify-center" style={{ width: '16px' }}>
                   <div className="h-3 text-xs text-gray-500 text-center" style={{ fontSize: '10px' }}>
-                    {isFirstWeekOfMonth && firstDate ? getMonthLabel(firstDate) : ''}
+                    {shouldShowMonth && firstDate ? getMonthLabel(firstDate) : ''}
                   </div>
                 </div>
               );
