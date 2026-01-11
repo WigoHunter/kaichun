@@ -19,6 +19,9 @@
     "ai-title": "Dear Human Sister... | by Kevin Hsu, 寫小說的矽谷工程師",
     "ai-description": "2047 年，人類被代號「宙斯」的 A.I. 取代。身為宙斯開發者的人類女兒，也是「宙斯」的妹妹，瑟琳娜被人唾棄、排擠，只能浪跡天涯。可是，人類最後的希望也是她⋯⋯",
     "ai-image": "/ai_sister.png",
+    "thief-title": "竊賊與網紅 | by Kevin Hsu, 寫小說的矽谷工程師",
+    "thief-description": "日知城有世上最美的夕陽。夜城有世上最髒的秘密。三十年前，一場大火燒斷了連接兩座城市的纜車。從此，夜城的人只能仰望他們永遠搆不到的光。萊因是個能看見「空隙」的小偷，在警長凱勒的保險箱裡意外發現自己母親寫的小說。他以為逃到日知城就能重新開始。但當他到了日知城，手賤偷了一個網紅的相機，他才發現：那場大火從未真正熄滅。",
+    "thief-image": "/thief.png",
     "image": "/2024H2.jpg"
   },
   "navigation": {
@@ -31,7 +34,7 @@
   },
   "home": {
     "title": "Software engineer, amateur fiction & blog writer",
-    "description": "Hey, I'm Kevin, an iOS engineer building creator toolings in SF Bay Area. I grew up in Taiwan, and dream of being a writer. Currently working on my first novel.",
+    "description": "Hey, I'm Kevin, an iOS engineer building creator toolings in SF Bay Area. I grew up in Taiwan, and dream of being a writer. Currently working on my first novel, <novel>《竊賊與網紅》</novel>.",
     "url": "https://www.kevinhsu.blog",
     "writing": "<num>3</num> Recent Essays",
     "writingDescription": "What I'm thinking lately",

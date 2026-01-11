@@ -6,7 +6,7 @@ export default function RichText(
     return (
         t.rich(phrase, {
             br: () => <br />,
-            novel: (text: string) => <Link href="/zh/chronicles-of-fire-theft" className="text-indigo-600 font-semibold">{text}</Link>,
+            novel: (text: string) => <Link href="/zh/the-thief-and-the-photographer" className="text-indigo-600 font-semibold">{text}</Link>,
             num: (text: string) => <span className="text-indigo-600 text-4xl">{text}</span>,
             strong: (text: string) => <strong>{text}</strong>,
             write: (text: string) => <a href="https://www.kevinhsu.blog/p/a-recap-of-my-first-two-years-of" className="text-indigo-600">{text}</a>,

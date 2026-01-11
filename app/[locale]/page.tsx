@@ -73,7 +73,7 @@ export default function Home() {
         </section>
 
         <section aria-labelledby="writing-streak-section">
-          <WritingStreakHeatmap className="mx-auto w-xl max-w-7xl mt-8" />
+          <WritingStreakHeatmap className="mx-auto max-w-2xl mt-8" />
         </section>
 
         <section aria-labelledby="writing-section" className="mt-16">
@@ -129,7 +129,7 @@ export default function Home() {
               <figure className="mt-4 mx-auto">
                 <Image
                   alt="Fantasy world illustration for creative writing project"
-                  src="/fantasy_banner.png"
+                  src="/thief.png"
                   width={640}
                   height={320}
                   className="rounded-xl bg-gray-50 object-contain"

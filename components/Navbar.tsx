@@ -23,6 +23,7 @@ import {
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 
 const novels = [
+    { name: '竊賊與網紅', description: '奇幻、長篇', href: '/zh/the-thief-and-the-photographer', image: '/thief.png' },
     { name: '盜火戰記', description: '奇幻、長篇', href: '/zh/chronicles-of-fire-theft', image: '/fantasy_banner.png' },
     { name: '靈煙師', description: '台灣奇幻、短篇', href: '/zh/the-spirit-smoke', image: '/taiwanese_magic.png' },
     { name: 'Dear Human Sister', description: '科幻、短篇', href: '/zh/dear-human-sister', image: '/ai_sister.png' },
