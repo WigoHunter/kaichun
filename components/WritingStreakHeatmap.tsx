@@ -127,13 +127,21 @@ const WritingStreakHeatmap: React.FC<HeatmapProps> = ({ className = '' }) => {
   const generateDateRange = (): string[] => {
     const dates: string[] = [];
 
-    // Show past 3 months
-    const endDate = new Date(); // Today
+    // Helper to format date as YYYY-MM-DD in local timezone
+    const formatLocalDate = (d: Date): string => {
+      const year = d.getFullYear();
+      const month = String(d.getMonth() + 1).padStart(2, '0');
+      const day = String(d.getDate()).padStart(2, '0');
+      return `${year}-${month}-${day}`;
+    };
+
+    // Show past 8 months
+    const endDate = new Date(); // Today in local time
     const startDate = new Date();
-    startDate.setMonth(startDate.getMonth() - 8); // 3 months ago
+    startDate.setMonth(startDate.getMonth() - 8);
 
     for (let d = new Date(startDate); d <= endDate; d.setDate(d.getDate() + 1)) {
-      dates.push(d.toISOString().split('T')[0]);
+      dates.push(formatLocalDate(d));
     }
     return dates;
   };
@@ -163,9 +171,17 @@ const WritingStreakHeatmap: React.FC<HeatmapProps> = ({ className = '' }) => {
   const weeks: string[][] = [];
   let currentWeek: string[] = [];
 
-  // Group dates by weeks (Sunday = 0)
+  // Group dates by weeks (Monday = 0, Sunday = 6)
+  // Use local time to match generateDateRange
+  const getMondayBasedDayOfWeek = (dateStr: string): number => {
+    const [year, month, day] = dateStr.split('-').map(Number);
+    const jsDay = new Date(year, month - 1, day).getDay(); // Sunday = 0, Saturday = 6
+    // Convert to Monday = 0, Sunday = 6
+    return (jsDay + 6) % 7;
+  };
+
   dateRange.forEach((date, index) => {
-    const dayOfWeek = new Date(date).getDay();
+    const dayOfWeek = getMondayBasedDayOfWeek(date);
 
     if (index === 0) {
       // Fill empty days at the beginning of the first week
@@ -177,7 +193,7 @@ const WritingStreakHeatmap: React.FC<HeatmapProps> = ({ className = '' }) => {
     currentWeek.push(date);
 
     if (dayOfWeek === 6 || index === dateRange.length - 1) {
-      // End of week or last date
+      // End of week (Sunday) or last date
       weeks.push([...currentWeek]);
       currentWeek = [];
     }
@@ -189,10 +205,10 @@ const WritingStreakHeatmap: React.FC<HeatmapProps> = ({ className = '' }) => {
         <h3 className="text-lg font-semibold text-gray-900 mb-2 text-center">{t('title')}</h3>
       </div>
 
-      <div className="overflow-x-auto max-w-full">
-        <div className="inline-block relative">
+      <div className="overflow-x-auto max-w-full flex justify-center">
+        <div style={{ minWidth: 'max-content' }}>
           {/* Month labels */}
-          <div className="flex mb-1">
+          <div className="flex flex-nowrap mb-1">
             {weeks.map((week, weekIndex) => {
               const firstDate = week.find(d => d !== '');
               const prevWeek = weekIndex > 0 ? weeks[weekIndex - 1] : null;
@@ -216,7 +232,7 @@ const WritingStreakHeatmap: React.FC<HeatmapProps> = ({ className = '' }) => {
           </div>
 
           {/* Heatmap grid */}
-          <div className="flex">
+          <div className="flex flex-nowrap">
             {weeks.map((week, weekIndex) => (
               <div key={weekIndex} className="flex flex-col" style={{ marginRight: '4px' }}>
                 {week.map((date, dayIndex) => {
