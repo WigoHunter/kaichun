@@ -29,6 +29,15 @@ export const getPosts = (locale: string) => locale === 'en' ? [
 ] : [
     {
         id: 1,
+        title: "2025 H2 回顧：蜜月旅行。還有，談談完成一個作品的「勇氣」。",
+        href: "https://www.kaichun.blog/p/2025-h2",
+        description:
+            "這是我回顧自己生活的方式：參考公司的 Performance Review，我每半年也會用 Impact, Direction and People 的角度，去替自己工作外的生活打個分數，讓自己更有意識地把時間與精力，花在我想花的人事物上。",
+        date: "Jan 10, 2026",
+        category: { title: "寫作" },
+    },
+    {
+        id: 2,
         title: "2025 H1 回顧：多出去走走，還有談談建立獎勵系統（而不是懲罰系統）。",
         href: "https://www.kaichun.blog/p/2025-h1-review",
         description:
@@ -37,21 +46,12 @@ export const getPosts = (locale: string) => locale === 'en' ? [
         category: { title: "寫作" },
     },
     {
-        id: 2,
+        id: 3,
         title: "《AI 2027》讀後感：人類最後的技能、時間的通膨。",
         href: "https://www.kaichun.blog/p/reading-ai-2027",
         description:
             "Daniel Kokotajlo 在離開 OpenAI 後創立 AI Futures Project 去研究 AI 發展與人類社會的預測。讀完過後，我感覺很快，人類最後守得住的技能，可能只剩下「品味」，而且「時間」也正在通膨。",
         date: "Apr 27, 2025",
         category: { title: "A.I. 與未來" },
-    },
-    {
-        id: 3,
-        title: "關於 A.I. 的三個觀察。",
-        href: "https://www.kaichun.blog/p/three-observations-about-ai",
-        description:
-            "作為一個聽說快被 A.I. 取代的工程師與熱愛寫作的人，我想要談談一些我對於 A.I. 的害怕與期待的事情：「寫作」越來越重要，「喜歡的事」越來越重要。人類語言變成一種程式語言。喔，還有，當個好人吧！",
-        date: "Mar 29, 2025",
-        category: { title: "寫作 & A.I." },
     },
 ];
